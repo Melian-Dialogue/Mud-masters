@@ -914,7 +914,7 @@
           try {
 
             const res = await axios.post(
-              `https://${url}/login`,
+              `${url}/login`,
               formData,
             );
             console.log(res);
@@ -950,8 +950,8 @@
     </script>
 
 <script>
-  // const url = 'mealfixer.onrender.com'
-  const url = 'mealfixer-scao.onrender.com'
+
+  const url = 'https://mealfixer-scao.onrender.com'
 
   document.addEventListener("DOMContentLoaded", function (event) {
     document.getElementById("verificationForm").addEventListener("submit", async function (event) {
@@ -961,7 +961,7 @@
       verifyBtn.setAttribute('disabled', 'disabled')
       verifyBtn.style.opacity = 0.4
       try {
-        const response = await axios.post(`https://${url}/verify-login`, { username, code })
+        const response = await axios.post(`${url}/verify-login`, { username, code })
         console.log(response);
         verificationResponse.textContent = "Successfully signed in!";
         verificationResponse.style.color = "green";
@@ -970,21 +970,13 @@
           //if paid or is free plan
           console.log(response);
           localStorage.setItem("userInfo",JSON.stringify(response.data))
-          window.location.href = `https://${url}/form.html`;
+          // window.location.href = `https://${url}/form.html`;
           
-          // if(response.data.paid == true || response.data.plan == 'free'){
-          // }else{
-          //   const res = await axios.post(`https://${url}/create-checkout-session`,
-          //   { 
-          //     plan: response.data.user.plan,
-          //     user_id: response.data.user._id,
-          //     site: url
-          //   }
-          //   )
-          //   if(res.status == 200){
-          //     window.location.href = res.data.url
-          //   }
-          // }
+          if(response.data.plan == 'free'){
+            window.location.href = `${url}/index.html#pricing`;
+          }else{
+            window.location.href = `${url}/form.html`;
+          }
 
         } catch (error) {
           console.error(error);

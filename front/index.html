@@ -5070,18 +5070,19 @@
 
       async function price_1(){
         checkUserData()
-        let userData = localStorage.getItem('userInfo')
-        userData = JSON.parse(userData);
-        const res = await axios.post(`${url}/create-checkout-session`,
-            { 
-              plan: userData.user.plan,
-              user_id: userData.user._id,
-              site: `${url}`
-            }
-            )
-            if(res.status == 200){
-              window.location.href = res.data.url
-            }
+        window.location.href = `${url}/form.html`
+        // let userData = localStorage.getItem('userInfo')
+        // userData = JSON.parse(userData);
+        // const res = await axios.post(`${url}/create-checkout-session`,
+        //     { 
+        //       plan: userData.user.plan,
+        //       user_id: userData.user._id,
+        //       site: `${url}`
+        //     }
+        //     )
+        //     if(res.status == 200){
+        //       window.location.href = res.data.url
+        //     }
       }
 
       async function price_2(){

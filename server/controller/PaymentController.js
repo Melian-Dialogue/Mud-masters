@@ -94,7 +94,7 @@ export const success = async (req, res) => {
 
     //redirecting the user to the dashboard
     setTimeout(() => {
-      res.redirect(303, `http://localhost:4000/success.html`);
+      res.redirect(303, `https://mealfixer-scao.onrender.com/success.html`);
     }, 3000);
   } catch (error) {
     console.error(error);
@@ -104,5 +104,5 @@ export const success = async (req, res) => {
 
 export const cancel = async (req, res) => {
   //redirect to the dashboard
-  res.redirect(303, `http://localhost:4000/failure.html`);
+  res.redirect(303, `https://mealfixer-scao.onrender.com/failure.html`);
 };

@@ -81,12 +81,13 @@ export const success = async (req, res) => {
         break;
 
       default:
-        request = 10;
+        requests = 10;
         break;
     }
 
     //update the user details in the db
     user.plan = data.plan;
+    user.requests = (requests + user.requests)
     await user.save();
 
     //insert the payment info in the

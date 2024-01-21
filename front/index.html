@@ -186,7 +186,8 @@
                   </li>
                   <li class="group relative" id="isLoged">
                     <a
-                      href="form.html"
+                      href="./form.html"
+                      onclick="tofrom()"
                       class="ud-menu-scroll mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70"
                     >
                       Meal plan
@@ -5115,6 +5116,11 @@
             if(res.status == 200){
               window.location.href = res.data.url
             }
+      }
+
+      //move to form
+      function tofrom(){
+        window.location.href = `${url}/form.html`
       }
 
 

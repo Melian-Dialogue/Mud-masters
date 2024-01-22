@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      MealFixr
+      Mud Masters
     </title>
     <link
       rel="shortcut icon"
@@ -190,7 +190,16 @@
                       onclick="tofrom()"
                       class="ud-menu-scroll mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70"
                     >
-                      Meal plan
+                      Learn
+                    </a>
+                  </li>
+                  <li class="group relative" id="isLoged">
+                    <a
+                      href="./chatbot.html"
+                      onclick="toChatbot()"
+                      class="ud-menu-scroll mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70"
+                    >
+                      Chatbot
                     </a>
                   </li>
                   <li class="group relative">
@@ -344,13 +353,12 @@
               <h1
                 class="mb-6 text-3xl font-bold leading-snug text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2]"
               >
-              Introducing Kenya's ONLY Multi-Modal, Multilingual AI Meal Planner
+              Master the Science of Drilling Fluid Engineering - Anywhere, Online				
               </h1>
               <p
                 class="mx-auto mb-9 max-w-[600px] text-base font-medium text-white sm:text-lg sm:leading-[1.44]"
               >
-              Meal Fixr is an AI-powered meal planning app that simplifies the process of creating healthy meal plans. The web app can consider a user's dietary preferences, nutritional goals, and available ingredients to generate optimised meal plans. It can also offer recipe suggestions, track calorie intake, and provide grocery lists for efficient meal preparation.				
-              </p>
+              Mud Masters uses artificial intelligence to provide personalised online training courses for professionals in the drilling fluid industry. The platform analyses the learner's performance and adapts the training program to enhance learning outcomes. Mud Masters also includes a virtual assistant which answers questions, explains, and guides learners through their journey, offering a personalised and interactive learning experience by incorporating game elements such as challenges, rewards, and leaderboards, making the learning experience more enjoyable and motivating.				              </p>
               <ul
                 class="mb-10 flex flex-wrap items-center justify-center gap-5"
               >
@@ -1547,7 +1555,7 @@
         </div>
         <div class="-mx-4 flex gap-x-5 gap-y-10 flex-wrap">
           <div class="w-full px-4 md:w-1/2 lg:w-1/4 my-20 rounded-lg shadow-primary shadow-2">
-            <!-- <div class="wow fadeInUp group mb-12" data-wow-delay=".2s">
+            <div class="wow fadeInUp group mb-12" data-wow-delay=".2s">
               <div
                 class="relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary"
               >
@@ -1606,7 +1614,7 @@
                 Our advanced algorithms meticulously match headhunters, considering job requirements and candidate preferences, ensuring accurate and efficient connections every time.              
               </p>
              
-            </div> -->
+            </div>
           </div>
           <div class="w-full px-4 md:w-1/2 lg:w-1/4 my-20 rounded-lg shadow-primary shadow-2">
             <div class="wow fadeInUp group mb-12" data-wow-delay=".1s">
@@ -1668,7 +1676,7 @@
               
             </div>
           </div>
-          <!-- <div class="w-full px-4 md:w-1/2 lg:w-1/4 my-20 rounded-lg shadow-primary shadow-2">
+          <div class="w-full px-4 md:w-1/2 lg:w-1/4 my-20 rounded-lg shadow-primary shadow-2">
             <div class="wow fadeInUp group mb-12" data-wow-delay=".25s">
               <div
                 class="relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary"
@@ -1709,7 +1717,7 @@
               </p>
             
             </div>
-          </div> -->
+          </div>
         </div>
       </div>
     </section>
@@ -1754,7 +1762,7 @@
                     class="mb-4 sm:mb-8 sm:h-[400px] md:h-[540px] lg:h-[400px] xl:h-[500px]"
                   >
                     <img
-                      src="./assets/images/about/about-image-04.png"
+                      src="./assets/images/about/about-image-01.png"
                       alt="about image"
                       class="h-full w-full object-cover object-center"
                     />
@@ -5062,7 +5070,8 @@
       
 
       // payments
-      let url = 'https://mealfixer-scao.onrender.com';
+      // let url = 'https://mealfixer-scao.onrender.com';
+      let url = 'http://localhost:4000';
       function checkUserData(){
         if(localStorage.getItem("userInfo") == undefined){
           window.location.href = `${url}/signin.html`
@@ -5113,6 +5122,10 @@
       //move to form
       function tofrom(){
         window.location.href = `${url}/form.html`
+      }
+
+      function toChatbot(){
+        window.location.href = `${url}/chatbot.html`
       }
 
 

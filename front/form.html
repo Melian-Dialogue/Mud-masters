@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> MealFixr</title>
+    <title> Mud Masters</title>
     <link
       rel="shortcut icon"
       href="assets/images/favicon.png"
@@ -310,242 +310,76 @@
 
               <div id="container">
                 <form id="loginForm" method="post" class="grid grid-cols-2">
+                  <div class="mb-12 text-lg font-bold">What do you want to learn?</div>
   
                   <div class="mb-[22px] ">
-                      <input placeholder="Age" type="number" 
-                      min="0" maxlength="5000" max="5000" 
+                    <div style="text-align: left !important; padding-left: 0.4rem;">
+                      <label for="interest">Topic of Interest</label>
+                    </div>
+                      <input placeholder="What Are Your Topics of Interest" type="text"
                       class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                      id="age" name="age" required>    
+                      id="interest" name="interest" required>    
                   </div>
+
+                  <div class="mb-[22px] ">
+                    <textarea placeholder="Learning Goals" rows="5" type="text"
+                    class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
+                    id="learning-goal" name="learning-goal" required></textarea>    
+                </div>
               
                   <div class="mb-[22px]">
                       <select class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                      id="gender" name="gender" required>
-                          <option value="" disabled selected>Select your Gender</option>
-                          <option value="male">Male</option>
-                          <option value="female">Female</option>
-                          <option value="other">Other</option>
+                      id="learning-style" name="learning-style" required>
+                          <option value="" disabled selected>Select your Learning Style</option>
+                          <option value="Text-based lessons">Text-based lessons</option>
+                          <option value="Interactive quizzes">Interactive quizzes</option>
+                          <option value="Real-world problem-solving exercises">Real-world problem-solving exercises</option>
                       </select>
                   </div>
-  
+
                   <div class="mb-[22px]">
-                      <input placeholder="Weight" type="number" 
-                      min="0" maxlength="5000" max="5000" 
-                      class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                      id="Weight" name="Weight" required>  
+                    <select class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
+                    id="prior-knowledge" name="prior-knowledge" required>
+                        <option value="" disabled selected>Select your Learning Prior Knowledge</option>
+                        <option value="Beginner">Beginner (new to the drilling fluid industry)</option>
+                        <option value="Intermediate">Intermediate (some experience in the field)</option>
+                        <option value="Advanced">Advanced (several years of experience or specialized knowledge)</option>
+                    </select>
                   </div>
-          
+
                   <div class="mb-[22px]">
-                      <select class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                      id="blood_type" name="blood_type" required>
-                          <option value="" disabled selected>Select your blood type</option>
-                          <option value="A">A</option>
-                          <option value="B">B</option>
-                          <option value="A/B">A/B</option>
-                          <option value="O">O</option>
-                      </select>
-                  </div> 
-  
-                  <div class="mb-[22px]">
-                      <select class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                      id="Allergies" name="Allergies" required>
-                          <option value="" disabled selected>Select your Allergies</option>
-                          <option value="Celery">Celery</option>
-                          <option value="Cereals containing gluten">Cereals containing gluten</option>
-                          <option value="Crustaceans">Crustaceans</option>
-                          <option value="Eggs">Eggs</option>
-                          <option value="Fish">Fish</option>
-                          <option value="Lupin">Lupin</option>
-                          <option value="Milk">Milk</option>
-                          <option value="Molluscs">Molluscs</option>
-                          <option value="Mustard">Mustard</option>
-                          <option value="Nuts">Nuts</option>
-                          <option value="Peanuts">Peanuts</option>
-                          <option value="Sesame seeds">Sesame seeds</option>
-                          <option value="Soya">Soya</option>
-                          <option value="Sulphur dioxide (sulphites)">Sulphur dioxide (sulphites)</option>
-                      </select>
-                  </div> 
-                 
-                  <div class="mb-[22px]">
-                      <select class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                      id="Diet" name="Diet" required>
-                          <option value="" disabled selected>Select your diet</option>
-                          <option value="Vegetarian">Vegetarian</option>
-                          <option value="Vegan">Vegan</option>
-                          <option value="Pescatarian">Pescatarian</option>
-                          <option value="Ketogenic">Ketogenic</option>
-                          <option value="Gluten-Free">Gluten-Free</option>
-                          <option value="Diary-Free">Diary-Freee</option>
-                          <option value="No Preference">No Preference</option>
-                      </select>
-                  </div> 
-                 
-                  <div class="mb-[22px]">
-                      <label class="text-left">Daily calorie consumption</label>
-                      <input placeholder="daily_calorie_consumption" type="range" 
-                      min="0" maxlength="5000" max="5000" value="1"
-                      class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                      id="daily_calorie_consumption" name="daily_calorie_consumption" required>   
-                      <div class="flex justify-between">
-                          <span id="daily_calorie_consumptionV">0 </span>
-                          <span>5000 cal</span>
-                      </div>   
+                    <select class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
+                    id="difficulty-level" name="difficulty-level" required>
+                        <option value="" disabled selected>Select your Learning Difficulty Level</option>
+                        <option value="Beginner">Beginner (basic overview and fundamental concepts)</option>
+                        <option value="Intermediate">Intermediate (more detailed information, some technical jargon)</option>
+                        <option value="Advanced">Advanced (in-depth information, technical details, complex issues)</option>
+                    </select>
                   </div>
-  
+
                   <div class="mb-[22px]">
-                      <label class="float-left">Daily calorie limit</label>
-                      <input placeholder="daily_calorie_limit" type="range" 
-                      min="0" maxlength="5000" max="5000" value="1"
-                      class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                      id="daily_calorie_limit" name="daily_calorie_limit" required>  
-                      <div class="flex justify-between">
-                          <span id="daily_calorie_limitV">0 cal</span>
-                          <span>5000 cal</span>
-                      </div>   
+                    <select class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
+                    id="learning-Mode" name="learning-Mode" required>
+                        <option value="" disabled selected>Select your Learning Mode</option>
+                        <option value="Beginner">Revision mode (review previously learned concepts)</option>
+                        <option value="Intermediate">Learning mode (learn new concepts)</option>
+                        <option value="Advanced">Challenge mode (test knowledge with quizzes or problems)</option>
+                    </select>
                   </div>
-  
+
                   <div class="mb-[22px]">
-                      <label class="float-left">Meal salt limit</label>
-                      <input placeholder="meal_salt_limit" type="range" 
-                      min="0" maxlength="600" max="600" value="1"
-                      class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                      id="meal_salt_limit" name="meal_salt_limit" required>  
-                      <div class="flex justify-between">
-                          <span id="meal_salt_limitV">0 mg</span>
-                          <span>600 mg</span>
-                      </div>   
-                  </div>
-  
-                  <div class="mb-[22px]">
-                      <label class="float-left">Meal sugar limit</label>
-                      <input placeholder="meal_sugar_limit" type="range" 
-                      min="0" maxlength="600" max="600" value="1"
-                      class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                      id="meal_sugar_limit" name="meal_sugar_limit" required>   
-                      <div class="flex justify-between">
-                          <span id="meal_sugar_limitV">0 mg</span>
-                          <span>600 mg</span>
-                      </div>   
-                  </div>
-  
-                  <div class="mb-[22px]">
-                      <label class="float-left">Spice tolerance</label>
-                      <input placeholder="spice_tolerance" type="range" 
-                      min="0" maxlength="10" max="10" value="1"
-                      class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                      id="spice_tolerance" name="spice_tolerance" required> 
-                      <div class="flex justify-between">
-                          <span>Very Mild</span>
-                          <span>Extremely hot</span>
-                      </div>     
-                  </div>
-                 
-  
-                  <div class="mb-[22px]">
-                      <select class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                      id="cuisine_influence" name="cuisine_influence" required>
-                          <option value="" disabled selected>Select your cuisine influence</option>
-                          <option value="Indian">Indian</option>
-                          <option value="Chinese">Chinese</option>
-                          <option value="Western European">Western European</option>
-                          <option value="Eastern European">Eastern European</option>
-                          <option value="North American">North American</option>
-                          <option value="Latin American">Latin American</option>
-                          <option value="Caribbean">Caribbean</option>
-                          <option value="Japanese">Japanese</option>
-                          <option value="Mediterranean">Mediterranean</option>
-                          <option value="Arabic">Arabic</option>
-                          <option value="Thai">Thai</option>
-                          <option value="Singaporean">Singaporean</option>
-                          <option value="West African">West African</option>
-                          <option value="East African">East African</option>
-                      </select>
-                  </div>
-                 
-                  <div class="mb-[22px]">
-                      <select class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                      id="food_preferences" name="food_preferences" multiple >
-                          <option value="" disabled selected>Select your food preferences</option>
-                          <option value="Lean proteins">Lean proteins</option>
-                          <option value="Complex carbohydrates">Complex carbohydrates</option>
-                          <option value="Healthy fats">Healthy fats</option>
-                          <option value="Dairy and alternatives">Dairy and alternatives</option>
-                          <option value="Simple carbohydrates">Simple carbohydrates</option>
-                          <option value="Green vegetables">Green vegetables</option>
-                          <option value="Legumes and beans">Legumes and beans</option>
-                          <option value="Whole foods">Whole foods</option>
-                          <option value="Balanced micronutrients">Balanced micronutrients</option>
-                          <option value="High fibre foods">High fibre foods</option>
-                          <option value="High protein foods">High protein foods</option>
-                      </select>
-                  </div>
-  
-                  <div class="mb-[22px]">
-                      <input placeholder="Meals per day" type="number" 
-                      class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                      id="meals_per_day" name="meals_per_day" required>    
-                  </div>
-  
-                  <div class="mb-[22px]">
-                      <select class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                      id="health_goals" name="health_goals" required>
-                          <option value="" disabled selected>Select your health goal</option>
-                          <option value="Weight loss">Weight loss</option>
-                          <option value="Weight gain">Weight gain</option>
-                          <option value="Maintain weight">Maintain weight</option>
-                          <option value="Muscle building">Muscle building</option>
-                          <option value="General fitness">General fitness</option>
-                      </select>
-                  </div> 
-  
-                  <div class="mb-[22px]">
-                    <label class="float-left">Activity level</label>
-                      <input placeholder="activity_levels" type="range" 
-                      min="0" max="10" value="1"
-                      class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                      id="activity_levels" name="activity_levels" required>  
-                      <div class="flex justify-between">
-                        <span id="activity_levelsV" >Very Mild</span>
-                        <span>Extremely hot</span>
-                    </div>    
-                  </div>
-  
-                  <div class="mb-[22px]">
-                      <select class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                      id="type_of_activity" name="type_of_activity" required>
-                          <option value="" disabled selected>Select your activity type</option>
-                          <option value="Flexibility ">Flexibility </option>
-                          <option value="Aerobic">Aerobic </option>
-                          <option value="Muscle Strengthening ">Muscle Strengthening </option>
-                      </select>
-                  </div>
-  
-                  <div class="mb-[22px]">
-                      <input placeholder="activity_levels" type="number" 
-                      min="0" max="10"
-                      class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                      id="activity_levels" name="activity_levels" required>    
-                  </div>
-  
-                  <div class="mb-[22px]">
-                      <input placeholder="daily_workout_time" type="number" 
-                      min="0" max="10" 
-                      class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                      id="daily_workout_time" name="daily_workout_time" required>    
-                  </div>
-                  
-                  <div class="mb-[22px]">
-                      <input placeholder="weekly workout quantity" type="number" 
-                      min="0" max="10" 
-                      class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                      id="weekly_workout_quantity" name="weekly_workout_quantity" required>    
+                    <select class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
+                    id="interactive-elements" name="interactive-elements" required>
+                        <option value="" disabled selected>Select your Interactive Elements</option>
+                        <option value="Beginner">Quizzes</option>
+                        <option value="Intermediate">Problem-solving exercises</option>
+                    </select>
                   </div>
   
                   <br>
                   <button 
                   class="border w-2/5 mx-7 bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded border-spacing-1 mb-2"
-                  type="button" id="check">Submit</button>
+                  type="button" id="check">Generate</button>
                   <br>
   
                   <span id="response"></span>
@@ -1334,53 +1168,53 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script>
-      const url = 'https://mealfixer-scao.onrender.com';
+      // const url = 'https://mealfixer-scao.onrender.com';
+      const url = 'http://localhost:4000';
       document.getElementById("ans-container").hidden = true
-      const setupRangeInput = (inputId, outputId, ty) => {
-      const
-        range = document.getElementById(inputId),
-        rangeV = document.getElementById(outputId),
-        setValue = () => {
-          const
-            newValue = Number((range.value - range.min) * 100 / (range.max - range.min)),
-            newPosition = 10 - (newValue * 0.2);
-          rangeV.innerHTML = `<span>${range.value} ${ty}</span>`;
-          rangeV.style.left = `calc(${newValue}% + (${newPosition}px))`;
-        };
+      
+    //   const setupRangeInput = (inputId, outputId, ty) => {
+    //   const
+    //     range = document.getElementById(inputId),
+    //     rangeV = document.getElementById(outputId),
+    //     setValue = () => {
+    //       const
+    //         newValue = Number((range.value - range.min) * 100 / (range.max - range.min)),
+    //         newPosition = 10 - (newValue * 0.2);
+    //       rangeV.innerHTML = `<span>${range.value} ${ty}</span>`;
+    //       rangeV.style.left = `calc(${newValue}% + (${newPosition}px))`;
+    //     };
 
-      document.addEventListener("DOMContentLoaded", setValue);
-      range.addEventListener('input', setValue);
-    };
+    //   document.addEventListener("DOMContentLoaded", setValue);
+    //   range.addEventListener('input', setValue);
+    // };
 
-    setupRangeInput('daily_calorie_consumption', 'daily_calorie_consumptionV', 'cal');
-    setupRangeInput('daily_calorie_limit', 'daily_calorie_limitV', 'cal');
-    setupRangeInput('meal_salt_limit', 'meal_salt_limitV', 'mg');
-    setupRangeInput('meal_sugar_limit', 'meal_sugar_limitV', 'mg');
-    setupRangeInput('activity_levels', 'activity_levelsV', 'mild_level');
+    // setupRangeInput('daily_calorie_consumption', 'daily_calorie_consumptionV', 'cal');
+    // setupRangeInput('daily_calorie_limit', 'daily_calorie_limitV', 'cal');
+    // setupRangeInput('meal_salt_limit', 'meal_salt_limitV', 'mg');
+    // setupRangeInput('meal_sugar_limit', 'meal_sugar_limitV', 'mg');
+    // setupRangeInput('activity_levels', 'activity_levelsV', 'mild_level');
 
 
       // end scroll
       const loader = document.getElementById("loader");
+      loader.style.display = "none";
       const response = document.getElementById("response");
       let foods = []
 
-      new MultiSelectTag('food_preferences', {
-              rounded: true,    // default true
-              shadow: true,      // default false
-              placeholder: 'Search',  // default Search...
-              tagColor: {
-                  textColor: '#327b2c',
-                  borderColor: '#92e681',
-                  bgColor: '#eaffe6',
-              },
-              onChange: function(values) {
-                 foods = values;
-              }
-          })
+      // new MultiSelectTag('food_preferences', {
+      //         rounded: true,    // default true
+      //         shadow: true,      // default false
+      //         placeholder: 'Search',  // default Search...
+      //         tagColor: {
+      //             textColor: '#327b2c',
+      //             borderColor: '#92e681',
+      //             bgColor: '#eaffe6',
+      //         },
+      //         onChange: function(values) {
+      //            foods = values;
+      //         }
+      //     })
 
-
-
-      loader.style.display = "none";
 
     function back() {
         document.getElementById("container").hidden = false
@@ -1395,53 +1229,29 @@
           loader.style.display = "block";
 
           // Get values from the form
-          const username = document.getElementById("username");
-          const email = document.getElementById("email");
+          // const username = document.getElementById("username");
+          // const email = document.getElementById("email");
 
-          const age = document.getElementById("age"); 
-          const gender = document.getElementById("gender");
-          const weight = document.getElementById("Weight");
-          const blood_type = document.getElementById("blood_type");
-          const allergies = document.getElementById("Allergies");
-          const diet = document.getElementById("Diet");
-          const daily_calorie_consumption = document.getElementById("daily_calorie_consumption");
-          const daily_calorie_limit = document.getElementById("daily_calorie_limit");
-          const meal_salt_limit = document.getElementById("meal_salt_limit");
-          const meal_sugar_limit = document.getElementById("meal_sugar_limit");
-          const spice_tolerance = document.getElementById("spice_tolerance");
-          const cuisine_influence = document.getElementById("cuisine_influence");
-          // const food_preferences = document.getElementById("food_preferences");
-          const meals_per_day = document.getElementById("meals_per_day");
-          const health_goals = document.getElementById("health_goals");
-          const activity_levels = document.getElementById("activity_levels");
-          const type_of_activity = document.getElementById("type_of_activity");
-          const daily_workout_time = document.getElementById("daily_workout_time");
-          const weekly_workout_quantity = document.getElementById("weekly_workout_quantity");
-
+          const topicOfInterest = document.getElementById("interest"); 
+          const learningGoals = document.getElementById("learning-goal");
+          const learningStyle = document.getElementById("learning-style");
+          const priorKnowledge = document.getElementById("prior-knowledge");
+          const difficultyLevel = document.getElementById("difficulty-level");
+          const learningMode = document.getElementById("learning-Mode");
+          const interactiveElements = document.getElementById("interactive-elements");
+         
       
           // Construct the data to be sent
           const formData = {
-            // username: username.value,
-            age: parseInt(age.value),  
-            gender: gender.value,   
-            weight: parseInt(weight.value) ,  
-            blood_type: blood_type.value,   
-            allergies: allergies.value,   
-            diet: diet.value,   
-            daily_calorie_consumption: parseInt(daily_calorie_consumption.value),  
-            daily_calorie_limit: parseInt(daily_calorie_limit.value),   
-            meal_salt_limit: parseInt(meal_salt_limit.value),   
-            meal_sugar_limit: parseInt(meal_sugar_limit.value),   
-            spice_tolerance: spice_tolerance.value,   
-            cuisine_influence: cuisine_influence.value,  
-            food_preferences: foods,   
-            meals_per_day: parseInt(meals_per_day.value),   
-            health_goals: health_goals.value,   
-            activity_levels: parseInt(activity_levels.value),  
-            type_of_activity: type_of_activity.value,   
-            daily_workout_time: parseInt(daily_workout_time.value),   
-            weekly_workout_quantity: parseInt(weekly_workout_quantity.value), 
-          };
+              topic_of_interest: topicOfInterest.value,
+              learning_goals: learningGoals.value,
+              learning_style: learningStyle.value,
+              prior_knowledge: priorKnowledge.value,
+              difficulty_level: difficultyLevel.value,
+              learning_mode: learningMode.value,
+              interaction: interactiveElements.value
+          }
+
 
           
           var i = 0;
@@ -1471,16 +1281,16 @@
             );
 
             let p = userDetails.data
-            if(p.user.requests > 0){
+            if(/*p.user.requests > 0*/true){
                 const res = await axios.post(
-                `https://kevkibe-mealfixr.onrender.com/generate_mealplan`,
+                `https://mudmasters-trainer.onrender.com/mudmasters/trainer`,
                 formData,
               );
 
               document.getElementById("ans-container").hidden = false;
               response.style.color = "green";
               response.style.margin = "10px 0";
-              response.textContent = "Successfully signed up! Please check your inbox for further Instructions";
+              // response.textContent = "Successfully signed up! Please check your inbox for further Instructions";
               loader.style.display = "none";
               // Handle the response from the server if needed
               // window.location.href = "https://headhuntrs.co.uk/signin.html";
@@ -1499,7 +1309,7 @@
 
               document.getElementById("container").hidden = true
               // document.getElementById("ans").innerHTML = res.data.meal_plan.trim()
-              responseFromApi = res.data.meal_plan;
+              responseFromApi = res.data;
               typeWriter()
             }else{
               loader.style.display = "none";

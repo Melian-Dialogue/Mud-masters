@@ -1122,7 +1122,7 @@
       const loader = document.getElementById("loader");
       const response = document.getElementById("response");
       // const url = `https://mealfixer.onrender.com`
-      const url = `https://mealfixer-scao.onrender.com`
+      const url = `https://mud-masters.onrender.com`
 
       loader.style.display = "none";
 
@@ -1154,6 +1154,8 @@
               formData,
             );
             console.log(formData);
+            // set signup flag
+            localStorage.setItem("hasJustSignedUp","true") 
 
             response.style.color = "green";
             response.style.margin = "10px 0";

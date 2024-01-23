@@ -951,7 +951,8 @@
 
 <script>
 
-  const url = 'https://mealfixer-scao.onrender.com'
+  const url = 'https://mud-masters.onrender.com'
+  // const url = 'http://localhost:4000'
 
   document.addEventListener("DOMContentLoaded", function (event) {
     document.getElementById("verificationForm").addEventListener("submit", async function (event) {
@@ -972,8 +973,9 @@
           localStorage.setItem("userInfo",JSON.stringify(response.data))
           // window.location.href = `https://${url}/form.html`;
           
-          if(response.data.plan == 'free'){
-            window.location.href = `${url}/index.html#pricing`;
+          if(localStorage.getItem("hasJustSignedUp") == "true"){
+            localStorage.removeItem("hasJustSignedUp")
+            window.location.href = `${url}/pricing.html`;
           }else{
             window.location.href = `${url}/form.html`;
           }

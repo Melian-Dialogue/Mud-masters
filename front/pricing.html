@@ -1,247 +1,219 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Mud Masters</title>
+    <title>
+      TwinTech
+    </title>
     <link
       rel="shortcut icon"
       href="assets/images/favicon.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.1/dist/css/multi-select-tag.css">
-    <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.1/dist/js/multi-select-tag.js"></script>
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/animate.css" />
     <link rel="stylesheet" href="assets/css/tailwind.css" />
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <!-- ==== WOW JS ==== -->
     <script src="assets/js/wow.min.js"></script>
     <script>
-      new WOW().init();
+      // new WOW().init();
     </script>
-  </head>
+
   <style>
-   /* chat start*/
-   body .card #message-section::-webkit-scrollbar {
-  width: 10px;
-}
-body .card #message-section {
-  height: 32vw;
-  padding: 0 2.5vw;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
-}
-body .card #message-section::-webkit-scrollbar-track {
-  background: var(--scrollbarBG);
-}
-body .card #message-section::-webkit-scrollbar-thumb {
-  background-color: var(--thumbBG);
-  border-radius: 6px;
-  border: 3px solid var(--scrollbarBG);
-}
-body .card #message-section #bot,
-body .card #message-section #user {
-  position: relative;
-  bottom: 0;
-  min-height: 1.5vw;
-  border: 0.15vw solid #777;
-  background-color: #fff;
-  border-radius: 0px 1.5vw 1.5vw 1.8vw;
-  padding: 1vw;
-  margin: 1.5vw 0;
-}
-body .card #message-section #user {
-  border: 1.5px solid #000;
-  border-radius: 1.5vw 0vw 1.5vw 1.8vw;
-  background-color: #000;
-  float: right;
-}
-body .card #message-section #user #user-response {
-  color: #fff;
-}
-body .card #message-section .message {
-  color: #000;
-  clear: both;
-  line-height: 1.2vw;
-  font-size: 1.2vw;
-  padding: 8px;
-  position: relative;
-  margin: 8px 0;
-  max-width: 85%;
-  word-wrap: break-word;
-  z-index: 2;
-}
-body .card #input-section {
-  z-index: 1;
-  padding: 0 2.5vw;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  overflow: hidden;
-  height: 6vw;
-  width: 100%;
-}
-body .card #input-section input {
-  color: #000;
-  min-width: 0.5vw;
-  outline: none;
-  height: 5vw;
-  width: 100%;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: solid #000 0.1vw;
-}
-body .card .send {
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  flex: 0 0 auto;
-  margin-left: 1.4vw;
-  margin-right: 0vw;
-  padding: 0;
-  position: relative;
-  outline: none;
-}
-body .card .send .circle {
-  position: relative;
-  width: 4.8vw;
-  height: 4.8vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-body .card .send .circle i {
-  font-size: 3vw;
-  margin-left: -1vw;
-  margin-top: 1vw;
-}
-   /* chat end*/
+            /* body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        } */
 
+        #hero-section {
+            position: relative;
+            height: 100vh; /* Adjust the height as needed */
+            overflow: hidden;
+        }
 
-    .loader {
-      border: 16px solid #f3f3f3;
-      border-radius: 50%;
-      border-top: 16px solid #3498db;
-      width: 60px;
-      height: 60px;
-      -webkit-animation: spin 2s linear infinite; /* Safari */
-      animation: spin 2s linear infinite;
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #content-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff; /* Adjust text color as needed */
+            text-align: center;
+        }
+
+        #content-overlay h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+        }
+
+        #content-overlay p {
+            font-size: 1.5em;
+            margin: 0;
+        }
+  
+        /* .header-logo {
+          background-image: url(./assets/images/logo/logo.png);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          height: 150px;
+          width: 150px;
+        } */
+
+  .formContainer {
+    padding: 20px 200px;
+  }
+  .formContainer form label {
+    border: 1px dotted white;
+  }
+  #labelText {
+    padding: 10px 30px;
+  }
+  .loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  .active {
+    display: none;
+  }
+
+  .feedbackResult{
+    display: none
+  }
+  #feedbackResult {
+    padding: 10px 150px;
+  }
+  .uploadForm{
+    display: none
+  }
+  .feedbackResult {
+    display: none
+  }
+
+  #findings {
+    flex-direction: col;
+  }
+  #findings a {
+    text-decoration: underline;
+    color: blue;
+  }
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @media screen and (max-width: 768px) {
+    .container{
+      padding: 20px 5px;
+    }
+    .formContainer{
+      padding: 20px;
+    }
+    #feedbackResult {
+      padding: 10px;
     }
 
-    #ans{
-      overflow: overlay;
-    }
-
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
+    #findings {
+    /* flex-direction: column; */
+  }
+  }
   </style>
+  </head>
 
   <body>
     <!-- ====== Navbar Section Start -->
     <div
-      class="absolute top-0 left-0 z-40 flex items-center w-full bg-transparent ud-header"
+      class="ud-header absolute left-0 top-0 z-40 flex w-full items-center bg-transparent"
     >
       <div class="container">
-        <div class="relative flex items-center justify-between -mx-4">
-          <div class="max-w-full p-4 w-60">
-            <a
-              href="index.html"
-              class="block text-center header-logo"
-              style="padding: 0; margin: 0"
-            >
-              <img
-                src="./assets/images/logo/logo.png"
-                class=""
-                width="200"
-                alt=""
-              />
+        <div class="relative p-4 flex items-center justify-between">
+          <div class="">
+            <a href="index.html" class="block text-center header-logo" style="padding: 0; margin: 0;">
+             <img src="./assets/images/logo/logo.png" class="" width="200" alt="">
             </a>
           </div>
-          <div class="flex items-center justify-between w-full px-4">
+          <div class="flex w-full items-center justify-between px-4">
             <div>
               <button
                 id="navbarToggler"
-                class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+                class="absolute right-4 top-1/2 block -translate-y-1/2 my-20 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
               >
                 <span
-                  class="relative my-[6px] block h-[2px] w-[30px] bg-dark dark:bg-white"
+                  class="relative my-[6px] block h-[2px] w-[30px] bg-white"
                 ></span>
                 <span
-                  class="relative my-[6px] block h-[2px] w-[30px] bg-dark dark:bg-white"
+                  class="relative my-[6px] block h-[2px] w-[30px] bg-white"
                 ></span>
                 <span
-                  class="relative my-[6px] block h-[2px] w-[30px] bg-dark dark:bg-white"
+                  class="relative my-[6px] block h-[2px] w-[30px] bg-white"
                 ></span>
               </button>
               <nav
                 id="navbarCollapse"
-                class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white dark:bg-dark-2 py-5 shadow-lg lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent dark:lg:bg-transparent lg:py-0 lg:px-4 lg:shadow-none xl:px-6"
+                class="absolute right-4 top-full hidden w-full max-w-[250px] my-20 rounded-lg bg-white py-5 shadow-lg dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6"
               >
                 <ul class="blcok lg:flex 2xl:ml-20">
-                  <li class="relative group">
+                  <li class="group relative">
                     <a
-                      href="index.html"
-                      class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark dark:text-white group-hover:text-primary lg:mr-0 lg:inline-flex lg:py-6 lg:px-0 lg:text-body-color dark:lg:text-dark-6"
+                      href="index.html#home"
+                      class="ud-menu-scroll mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70"
                     >
                       Home
                     </a>
                   </li>
-                  <li class="relative group">
+                  <li class="group relative">
                     <a
                       href="index.html#about"
-                      class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark dark:text-white group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-body-color dark:lg:text-dark-6 xl:ml-10"
+                      class="ud-menu-scroll mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10"
                     >
                       About
                     </a>
                   </li>
-                  <li class="relative group">
+                  <li class="group relative">
                     <a
                       href="index.html#pricing"
-                      class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark dark:text-white group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-body-color dark:lg:text-dark-6 xl:ml-10"
+                      class="ud-menu-scroll mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10"
                     >
                       Pricing
                     </a>
                   </li>
-                  <li class="relative group">
+                  <li class="group relative">
                     <a
                       href="index.html#team"
-                      class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark dark:text-white group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-body-color dark:lg:text-dark-6 xl:ml-10"
+                      class="ud-menu-scroll mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10"
                     >
                       Team
                     </a>
                   </li>
-                  <li class="relative group">
+                  <li class="group relative">
                     <a
                       href="index.html#contact"
-                      class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark dark:text-white group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-body-color dark:lg:text-dark-6 xl:ml-10"
+                      class="ud-menu-scroll mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10"
                     >
                       Contact
-                    </a>
-                  </li>
-                  <li class="relative group">
-                    <a
-                      href="signin.html"
-                      class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark dark:text-white group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-body-color dark:lg:text-dark-6 xl:ml-10"
-                    >
-                      Login
-                    </a>
-                  </li>
-                  <li class="relative group">
-                    <a
-                      href="signup.html"
-                      class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark dark:text-white group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-body-color dark:lg:text-dark-6 xl:ml-10"
-                    >
-                      Sign Up
                     </a>
                   </li>
                 </ul>
@@ -250,17 +222,17 @@ body .card .send .circle i {
             <div class="flex items-center justify-end pr-16 lg:pr-0">
               <label
                 for="themeSwitcher"
-                class="inline-flex items-center cursor-pointer"
+                class="inline-flex cursor-pointer items-center"
                 aria-label="themeSwitcher"
-                username="themeSwitcher"
+                name="themeSwitcher"
               >
                 <input
                   type="checkbox"
-                  username="themeSwitcher"
+                  name="themeSwitcher"
                   id="themeSwitcher"
                   class="sr-only"
                 />
-                <span class="block text-dark dark:hidden dark:text-white">
+                <span class="block text-white dark:hidden">
                   <svg
                     class="fill-current"
                     width="24"
@@ -274,7 +246,7 @@ body .card .send .circle i {
                     />
                   </svg>
                 </span>
-                <span class="hidden text-dark dark:block dark:text-white">
+                <span class="hidden text-white dark:block">
                   <svg
                     class="fill-current"
                     width="24"
@@ -323,13 +295,13 @@ body .card .send .circle i {
               <div class="hidden sm:flex">
                 <a
                   href="signin.html"
-                  class="loginBtn py-2 px-[22px] text-base font-medium text-dark dark:text-white hover:opacity-70"
+                  class="loginBtn px-[22px] py-2 text-base font-medium text-white hover:opacity-70"
                 >
                   Sign In
                 </a>
                 <a
                   href="signup.html"
-                  class="px-6 py-2 text-base font-medium text-white duration-300 ease-in-out rounded-md signUpBtn bg-primary hover:bg-blue-dark"
+                  class="signUpBtn rounded-md bg-white bg-opacity-20 px-6 py-2 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-100 hover:text-dark"
                 >
                   Sign Up
                 </a>
@@ -341,510 +313,192 @@ body .card .send .circle i {
     </div>
     <!-- ====== Navbar Section End -->
 
-    <!-- ====== Banner Section Start -->
-    <div
-      class="relative z-10 overflow-hidden pt-[120px] pb-[60px] md:pt-[130px] lg:pt-[160px] dark:bg-dark"
+    <!-- ====== Pricing Section Start -->
+    <section
+      id="pricing"
+      class="relative z-20 overflow-hidden bg-white pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px]"
     >
-      <div
-        class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-stroke/0 via-stroke dark:via-dark-3 to-stroke/0"
-      ></div>
-      <div class="container">
-        <div class="flex flex-wrap items-center -mx-4">
+      <div class="container mx-auto">
+        <div class="-mx-4 flex flex-wrap">
           <div class="w-full px-4">
-            <div class="text-center">
-              <h1
-                class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]"
+            <div class="mx-auto mb-[60px] max-w-[510px] text-center">
+              <span class="mb-2 block text-lg font-semibold text-primary">
+                Pricing Table
+              </span>
+              <h2
+                class="mb-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]"
               >
-                Meal plan generator
-              </h1>
-
-              <ul class="flex items-center justify-center gap-[10px]">
-                <li>
-                  <a
-                    href="index.html"
-                    class="flex items-center gap-[10px] text-base font-medium text-dark dark:text-white"
-                  >
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="javascript:void(0)"
-                    class="flex items-center gap-[10px] text-base font-medium text-body-color"
-                  >
-                    <span class="text-body-color dark:text-dark-6"> / </span>
-                    plan generator
-                  </a>
-                </li>
-              </ul>
+                Perfect Pricing Plan
+              </h2>
+              <p class="text-base text-body-color dark:text-dark-6">
+                Unlock the full potential of Headhuntrs with flexible pricing plans designed to suit your needs, ensuring cost-effectiveness and maximizing the benefits of our innovative platform.
+              </p>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- ====== Banner Section End -->
-
-    <!-- ====== Forms Section Start -->
-    <section class="bg-[#F4F7FF] py-14 lg:py-[90px] dark:bg-dark">
-      
-      <div class="container" >
-        <div class="flex flex-wrap -mx-4">
-          <div class="w-full px-4">
+        <div class="-mx-4 flex flex-wrap justify-center">
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
             <div
-              class="wow fadeInUp relative mx-auto max-w-[800px] overflow-hidden rounded-xl shadow-form bg-white dark:bg-dark-2 py-14 px-8 text-center sm:px-12 md:px-[60px]"
-              data-wow-delay=".15s"
+              class="relative z-10 mb-10 overflow-hidden rounded-xl bg-white px-8 py-10 shadow-pricing dark:bg-dark-2 sm:p-12 lg:px-6 lg:py-10 xl:p-14"
             >
-              <div class="mb-10 text-left">
-                <!-- <a href="index.html" class="block text-center header-logo" style="padding: 0; margin: 0;">
-                <img src="./assets/images/logo/logod.png" class="" width="200" alt="">
-               </a> -->
-              </div>
-
-              <!-- <div class="container text-left" id="ans-container">
-                <button class="container text-blue-600 underline" onclick="back()"><a href="#" style="color: #3498db;">back</a></button>
-                <div>
-                  <div style="white-space: pre-wrap;" class="flex flex-wrap  border p-4" id="ans">
-                  </div>
-                </div>
-              </div> -->
-
-              <div id="container">
-
-                <div class="card">
-                  <div id="header">
-                    <h1>Ask any question</h1>
-                  </div>
-                  <div id="message-section">
-                    <div class="message" id="bot"><span id="bot-response">Hello.. I'm listening! Go on..</span></div>
-                  </div>
-                  <div id="input-section" >
-                    <input class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                      id="input" type="text" placeholder="Type a message" autocomplete="off" autofocus="autofocus"/>
-                    <button class="send" onclick="sendMessage()">
-                      <div class="circle"><i class="zmdi zmdi-mail-send"></i></div>
-                    </button>
-                  </div>
-                  <!-- Loader start -->
-                  <div class="flex justify-center items-center">
-                    <div id="loader" class="loader" style="margin: 10px 0"></div>
-                  </div>
-                  <!-- Loader end -->
-                  <script>
-                      
-                    function sendMessage() {
-                      const inputField = document.getElementById("input");
-                      let input = inputField.value.trim();
-                      input != "" && output(input);
-                      inputField.value = "";
-                    }
-                    document.addEventListener("DOMContentLoaded", () => {
-                      const inputField = document.getElementById("input");
-                      inputField.addEventListener("keydown",async function (e) {
-                        if (e.code === "Enter") {
-                          let input = inputField.value.trim();
-                          input != "" && await output(input);
-                          inputField.value = "";
-                        }
-                      });
-                    });
-                    
-                    async function output(input) {
-                      let product;
-                      loader.style.display = "block";
-                    
-                      let text = input.toLowerCase().replace(/[^\w\s\d]/gi, "");
-                    
-                      text = text
-                        .replace(/[\W_]/g, " ")
-                        .replace(/ a /g, " ")
-                        .replace(/i feel /g, "")
-                        .replace(/whats/g, "what is")
-                        .replace(/please /g, "")
-                        .replace(/ please/g, "")
-                        .trim();
-
-                        
-                    
-                      try {
-
-                          let userData = localStorage.getItem('userInfo')
-                          userData = JSON.parse(userData);
-                          const userDetails = await axios.get(
-                            `${url}/user`,
-                            {
-                              headers: {
-                                'Authorization': 'Bearer ' + userData.token
-                              } 
-                            }
-                          );
-
-                          let formData = {
-                              query : input
-                          }
-
-                          let p = userDetails.data
-                          if(/*p.user.requests > 0*/true){
-                              const res = await axios.post(
-                              `https://mudmasters-chatbot.onrender.com/mudmasters/chatbot`,
-                              formData
-                            );
-
-                            // document.getElementById("ans-container").hidden = false;
-                            //   response.style.color = "green";
-                            //   response.style.margin = "10px 0";
-                            // response.textContent = "Successfully signed up! Please check your inbox for further Instructions";
-                              // loader.style.display = "none";
-                            // Handle the response from the server if needed
-                            // window.location.href = "https://headhuntrs.co.uk/signin.html";
-
-                            //reduce request count
-                            let userData = localStorage.getItem('userInfo')
-                            userData = JSON.parse(userData);
-                            const requestCount = await axios.get(
-                              `${url}/update-requests`,
-                              {
-                                headers: {
-                                  'Authorization': 'Bearer ' + userData.token
-                                } 
-                              }
-                            );
-
-                            // document.getElementById("container").hidden = true
-                            // document.getElementById("ans").innerHTML = res.data.meal_plan.trim()
-                            responseFromApi = res.data.response;
-                          //   typeWriter()
-                          }else{
-                            loader.style.display = "none";
-                          //   response.style.color = "red";
-                          //   response.textContent = "You have no active of sub-scriptions";
-                          }
-
-                        } catch (error) {
-                          loader.style.display = "none";
-                          console.log(error);
-
-                            response.style.color = "red";
-                            response.textContent = "Some error happened please try again.";
-
-                        }
-                        loader.style.display = "none";  
-                        addChat(input, responseFromApi);
-                    }
-                    
-                    function compare(triggerArray, replyArray, string) {
-                      let item;
-                      for (let x = 0; x < triggerArray.length; x++) {
-                        for (let y = 0; y < replyArray.length; y++) {
-                          if (triggerArray[x][y] == string) {
-                            items = replyArray[x];
-                            item = items[Math.floor(Math.random() * items.length)];
-                          }
-                        }
-                      }
-                      //containMessageCheck(string);
-                      if (item) return item;
-                      else return containMessageCheck(string);
-                    }
-                    
-                  //   function containMessageCheck(string) {
-                  //     let expectedReply = [
-                  //       [
-                  //         "Good Bye, dude",
-                  //         "Bye, See you!",
-                  //         "Dude, Bye. Take care of your health in this situation."
-                  //       ],
-                  //       ["Good Night, dude", "Have a sound sleep", "Sweet dreams"],
-                  //       ["Have a pleasant evening!", "Good evening too", "Evening!"],
-                  //       ["Good morning, Have a great day!", "Morning, dude!"],
-                  //       ["Good Afternoon", "Noon, dude!", "Afternoon, dude!"]
-                  //     ];
-                  //     let expectedMessage = [
-                  //       ["bye", "tc", "take care"],
-                  //       ["night", "good night"],
-                  //       ["evening", "good evening"],
-                  //       ["morning", "good morning"],
-                  //       ["noon"]
-                  //     ];
-                  //     let item;
-                  //     for (let x = 0; x < expectedMessage.length; x++) {
-                  //       if (expectedMessage[x].includes(string)) {
-                  //         items = expectedReply[x];
-                  //         item = items[Math.floor(Math.random() * items.length)];
-                  //       }
-                  //     }
-                  //     return item;
-                  //   }
-
-                    function addChat(input, product) {
-                      const mainDiv = document.getElementById("message-section");
-                      let userDiv = document.createElement("div");
-                      userDiv.id = "user";
-                      userDiv.classList.add("message");
-                      userDiv.innerHTML = `<span id="user-response" style="white-space: pre-wrap;">${input}</span>`;
-                      mainDiv.appendChild(userDiv);
-                    
-                      let botDiv = document.createElement("div");
-                      botDiv.id = "bot";
-                      botDiv.classList.add("border");
-                      botDiv.classList.add("p-3");
-                      botDiv.classList.add("mb-4");
-                      botDiv.classList.add("rounded-md");
-                      botDiv.classList.add("message");
-                      botDiv.innerHTML = `<span id="bot-response">${product}</span>`;
-                      mainDiv.appendChild(botDiv);
-                      var scroll = document.getElementById("message-section");
-                      scroll.scrollTop = scroll.scrollHeight;
-                    }
-                  </script>
-                </div>
-
-            
-              </div>
-          
-              <!-- <p class="mb-4 text-base text-body-secondary">
-                By creating an account you are agree with our
-                <a
-                  href="javascript:void(0)"
-                  class="text-primary hover:underline"
+              <span
+                class="mb-5 block text-xl font-medium text-dark dark:text-white"
+              >
+                Starter
+              </span>
+              <h2
+                class="mb-11 text-4xl font-semibold text-dark dark:text-white xl:text-[42px] xl:leading-[1.21]"
+              >
+                <span class="text-xl font-medium">£</span>
+                <span class="-ml-1 -tracking-[2px]">0.00</span>
+                <span
+                  class="text-base font-normal text-body-color dark:text-dark-6"
                 >
-                  Privacy
-                </a>
-                and
-                <a
-                  href="javascript:void(0)"
-                  class="text-primary hover:underline"
-                >
-                  Policy
-                </a>
-              </p> -->
-
-              <div>
-                <span class="absolute top-1 right-1">
-                  <svg
-                    width="40"
-                    height="40"
-                    viewBox="0 0 40 40"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      cx="1.39737"
-                      cy="38.6026"
-                      r="1.39737"
-                      transform="rotate(-90 1.39737 38.6026)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="1.39737"
-                      cy="1.99122"
-                      r="1.39737"
-                      transform="rotate(-90 1.39737 1.99122)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="13.6943"
-                      cy="38.6026"
-                      r="1.39737"
-                      transform="rotate(-90 13.6943 38.6026)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="13.6943"
-                      cy="1.99122"
-                      r="1.39737"
-                      transform="rotate(-90 13.6943 1.99122)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="25.9911"
-                      cy="38.6026"
-                      r="1.39737"
-                      transform="rotate(-90 25.9911 38.6026)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="25.9911"
-                      cy="1.99122"
-                      r="1.39737"
-                      transform="rotate(-90 25.9911 1.99122)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="38.288"
-                      cy="38.6026"
-                      r="1.39737"
-                      transform="rotate(-90 38.288 38.6026)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="38.288"
-                      cy="1.99122"
-                      r="1.39737"
-                      transform="rotate(-90 38.288 1.99122)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="1.39737"
-                      cy="26.3057"
-                      r="1.39737"
-                      transform="rotate(-90 1.39737 26.3057)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="13.6943"
-                      cy="26.3057"
-                      r="1.39737"
-                      transform="rotate(-90 13.6943 26.3057)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="25.9911"
-                      cy="26.3057"
-                      r="1.39737"
-                      transform="rotate(-90 25.9911 26.3057)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="38.288"
-                      cy="26.3057"
-                      r="1.39737"
-                      transform="rotate(-90 38.288 26.3057)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="1.39737"
-                      cy="14.0086"
-                      r="1.39737"
-                      transform="rotate(-90 1.39737 14.0086)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="13.6943"
-                      cy="14.0086"
-                      r="1.39737"
-                      transform="rotate(-90 13.6943 14.0086)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="25.9911"
-                      cy="14.0086"
-                      r="1.39737"
-                      transform="rotate(-90 25.9911 14.0086)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="38.288"
-                      cy="14.0086"
-                      r="1.39737"
-                      transform="rotate(-90 38.288 14.0086)"
-                      fill="#3056D3"
-                    />
-                  </svg>
+                  / Month
                 </span>
-                <span class="absolute left-1 bottom-1">
-                  <svg
-                    width="29"
-                    height="40"
-                    viewBox="0 0 29 40"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      cx="2.288"
-                      cy="25.9912"
-                      r="1.39737"
-                      transform="rotate(-90 2.288 25.9912)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="14.5849"
-                      cy="25.9911"
-                      r="1.39737"
-                      transform="rotate(-90 14.5849 25.9911)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="26.7216"
-                      cy="25.9911"
-                      r="1.39737"
-                      transform="rotate(-90 26.7216 25.9911)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="2.288"
-                      cy="13.6944"
-                      r="1.39737"
-                      transform="rotate(-90 2.288 13.6944)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="14.5849"
-                      cy="13.6943"
-                      r="1.39737"
-                      transform="rotate(-90 14.5849 13.6943)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="26.7216"
-                      cy="13.6943"
-                      r="1.39737"
-                      transform="rotate(-90 26.7216 13.6943)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="2.288"
-                      cy="38.0087"
-                      r="1.39737"
-                      transform="rotate(-90 2.288 38.0087)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="2.288"
-                      cy="1.39739"
-                      r="1.39737"
-                      transform="rotate(-90 2.288 1.39739)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="14.5849"
-                      cy="38.0089"
-                      r="1.39737"
-                      transform="rotate(-90 14.5849 38.0089)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="26.7216"
-                      cy="38.0089"
-                      r="1.39737"
-                      transform="rotate(-90 26.7216 38.0089)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="14.5849"
-                      cy="1.39761"
-                      r="1.39737"
-                      transform="rotate(-90 14.5849 1.39761)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="26.7216"
-                      cy="1.39761"
-                      r="1.39737"
-                      transform="rotate(-90 26.7216 1.39761)"
-                      fill="#3056D3"
-                    />
-                  </svg>
-                </span>
+              </h2>
+              <div class="mb-[50px]">
+                <h5 class="mb-5 text-lg font-medium text-dark dark:text-white">
+                  Features
+                </h5>
+                <div class="flex flex-col gap-[14px]">
+                  <p class="text-base text-body-color dark:text-dark-6">
+                    10 Jobs/month in the UK
+                  </p>
+                  <p class="text-base text-body-color dark:text-dark-6">
+                    AI Resume Analysis
+                  </p>
+                  <p class="text-base text-body-color dark:text-dark-6">
+                    Basic Matching Algorithm
+                  </p>
+                  <p class="text-base text-body-color dark:text-dark-6">
+                    Limited Virtual Interviews
+                  </p>
+                </div>
               </div>
+              <a
+                href="javascript:price_1()"
+                class="inline-block rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white transition hover:bg-blue-dark"
+              >
+                Purchase Now
+              </a>
+            </div>
+          </div>
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+            <div
+              class="relative z-10 mb-10 overflow-hidden rounded-xl bg-white px-8 py-10 shadow-pricing dark:bg-dark-2 sm:p-12 lg:px-6 lg:py-10 xl:p-14"
+            >
+              <p
+                class="absolute right-[-50px] top-[60px] inline-block -rotate-90 rounded-bl-md rounded-tl-md bg-primary px-5 py-2 text-base font-medium text-white"
+              >
+                Recommended
+              </p>
+              <span
+                class="mb-5 block text-xl font-medium text-dark dark:text-white"
+              >
+                Basic
+              </span>
+              <h2
+                class="mb-11 text-4xl font-semibold text-dark dark:text-white xl:text-[42px] xl:leading-[1.21]"
+              >
+                <span class="text-xl font-medium">£</span>
+                <span class="-ml-1 -tracking-[2px]">24.99</span>
+                <span
+                  class="text-base font-normal text-body-color dark:text-dark-6"
+                >
+                  / Month
+                </span>
+              </h2>
+              <div class="mb-[50px]">
+                <h5 class="mb-5 text-lg font-medium text-dark dark:text-white">
+                  Features
+                </h5>
+                <div class="flex flex-col gap-[14px]">
+                  <p class="text-base text-body-color dark:text-dark-6">
+                    100 Jobs/month in the UK/USA/CANADA
+                  </p>
+                  <p class="text-base text-body-color dark:text-dark-6">
+                    Enhanced AI Resume Analysis
+                  </p>
+                  <p class="text-base text-body-color dark:text-dark-6">
+                    Advanced Matching Algorithm
+                  </p>
+                  <p class="text-base text-body-color dark:text-dark-6">
+                    Unlimited Virtual Interviews
+                  </p>
+                  <p class="text-base text-body-color dark:text-dark-6">
+                    Priority Customer Support 
+                  </p>
+                </div>
+              </div>
+              <a
+                href="javascript:price_2()"
+                class="inline-block rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white transition hover:bg-blue-dark"
+              >
+                Purchase Now
+              </a>
+            </div>
+          </div>
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+            <div
+              class="relative z-10 mb-10 overflow-hidden rounded-xl bg-white px-8 py-10 shadow-pricing dark:bg-dark-2 sm:p-12 lg:px-6 lg:py-10 xl:p-14"
+            >
+              <span
+                class="mb-5 block text-xl font-medium text-dark dark:text-white"
+              >
+                Premium
+              </span>
+              <h2
+                class="mb-11 text-4xl font-semibold text-dark dark:text-white xl:text-[42px] xl:leading-[1.21]"
+              >
+                <span class="text-xl font-medium">£</span>
+                <span class="-ml-1 -tracking-[2px]">49.99</span>
+                <span
+                  class="text-base font-normal text-body-color dark:text-dark-6"
+                >
+                  / Month
+                </span>
+              </h2>
+              <div class="mb-[50px]">
+                <h5 class="mb-5 text-lg font-medium text-dark dark:text-white">
+                  Features
+                </h5>
+                <div class="flex flex-col gap-[14px]">
+                  <p class="text-base text-body-color dark:text-dark-6">
+                    Unlimited Jobs in the English speaking world
+                  </p>
+                  <p class="text-base text-body-color dark:text-dark-6">
+                    Tailored AI Solutions
+                  </p>
+                  <p class="text-base text-body-color dark:text-dark-6">
+                    Premium Matching Feature
+                  </p>
+                  <p class="text-base text-body-color dark:text-dark-6">
+                    Unlimited Virtual Interviews with Advanced Analytics
+                  </p>
+                  <p class="text-base text-body-color dark:text-dark-6">
+                    Dedicated Account Manager
+                  </p>
+                  <p class="text-base text-body-color dark:text-dark-6">
+                    Custom Integrations
+                  </p>
+                  <p class="text-base text-body-color dark:text-dark-6">
+                    24/7 Priority Customer Support
+                  </p>
+                </div>
+              </div>
+              <a
+                href="javascript:price_3()"
+                class="inline-block rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white transition hover:bg-blue-dark"
+              >
+                Purchase Now
+              </a>
             </div>
           </div>
         </div>
       </div>
-     
     </section>
-    <!-- ====== Forms Section End -->
-
-    
+    <!-- ====== Pricing Section End -->
 
     <!-- ====== Footer Section Start -->
     <footer
@@ -855,17 +509,11 @@ body .card .send .circle i {
         <div class="-mx-4 flex flex-wrap">
           <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-3/12">
             <div class="mb-10 w-full">
-              <a
-                href="javascript:void(0)"
-                class="my-6 text-3xl text-white font-bold"
-              >
-                Mealfixer
-              </a>
-              <p
-                class="mb-8 max-w-[270px] text-base text-gray-7 mt-10"
-                style="margin: 30px 0"
-              >
-              Embark on a Flavorful Journey with Mealfixer: Redefine Your Culinary Adventure and Explore the AI-Powered Future of Meal Planning.
+              <a href="index.html" class="block text-center header-logo" style="padding: 0; margin: 0;">
+                <img src="./assets/images/logo/logod.png" class="" width="200" alt="">
+               </a>
+              <p class="mb-8 max-w-[270px] text-base text-gray-7 mt-10"                 style="margin: 30px 0;"
+              >Join Mealfixer today and redefine your recruitment journey. Experience the future of talent acquisition with our AI-driven platform.
               </p>
               <div class="-mx-3 flex items-center">
                 <a
@@ -951,7 +599,7 @@ body .card .send .circle i {
               <ul>
                 <li>
                   <a
-                    href="index.html"
+                    href="javascript:void(0)"
                     class="mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
                     Home
@@ -959,7 +607,7 @@ body .card .send .circle i {
                 </li>
                 <li>
                   <a
-                    href="index.html#features"
+                    href="javascript:void(0)"
                     class="mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
                     Features
@@ -967,7 +615,7 @@ body .card .send .circle i {
                 </li>
                 <li>
                   <a
-                    href="index.html#about"
+                    href="javascript:void(0)"
                     class="mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
                     About
@@ -975,7 +623,7 @@ body .card .send .circle i {
                 </li>
                 <li>
                   <a
-                    href="index.html#testimonials"
+                    href="javascript:void(0)"
                     class="mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
                     Testimonial
@@ -990,7 +638,7 @@ body .card .send .circle i {
               <ul>
                 <li>
                   <a
-                    href="index.html#features"
+                    href="javascript:void(0)"
                     class="mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
                     How it works
@@ -1025,14 +673,16 @@ body .card .send .circle i {
           </div>
           <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12">
             <div class="mb-10 w-full">
-              <h4 class="mb-9 text-lg font-semibold text-white">Links</h4>
+              <h4 class="mb-9 text-lg font-semibold text-white">
+                Links
+              </h4>
               <ul>
                 <li>
                   <a
                     href="javascript:void(0)"
                     class="mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
-                    Privacy policy
+                  Privacy policy
                   </a>
                 </li>
                 <li>
@@ -1040,7 +690,7 @@ body .card .send .circle i {
                     href="javascript:void(0)"
                     class="mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
-                    Legal notice
+                  Legal notice
                   </a>
                 </li>
                 <li>
@@ -1048,33 +698,24 @@ body .card .send .circle i {
                     href="javascript:void(0)"
                     class="mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
-                    Terms of service
+                  Terms of service
                   </a>
                 </li>
+                
               </ul>
             </div>
           </div>
           <div class="w-full px-4 md:w-2/3 lg:w-6/12 xl:w-3/12 text-white">
-            <div>
-              <h1>Subscribe To our Newsletter</h1>
-              <form action="#" class="" style="margin: 30px 0 0 0">
-                <div class="mt-6 flex max-w-md gap-x-4">
-                  <!-- <label for="email-address" class="sr-only hidden">Email address</label> -->
-                  <input
-                    type="email"
-                    id="Newsletter"
-                    required
-                    class="min-w-0 flex-auto rounded-md bg-dark text-white shadow-sm border"
-                    placeholder="your email address"
-                    style="padding: 10px; margin-right: 5px; border-color: gray"
-                  />
-                  <button
-                  >
-                    subscribe
-                  </button>
-                </div>
-              </form>
-            </div>
+           <div>
+            <h1>Subscribe To our Newsletter</h1>
+            <form action="#" class="" style="margin: 30px 0 0 0;">
+              <div class="mt-6 flex max-w-md gap-x-4">
+                <!-- <label for="email-address" class="sr-only hidden">Email address</label> -->
+                <input type="email" id="email" required class="min-w-0 flex-auto rounded-md bg-dark text-white shadow-sm border" placeholder="your email address" style="padding: 10px; margin-right: 5px; border-color: gray;">
+                <button class="flex-none rounded-md bg-primary text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500" style="padding: 5px;">subscribe</button>
+              </div>
+          </form>
+           </div>
           </div>
         </div>
       </div>
@@ -1085,20 +726,11 @@ body .card .send .circle i {
         <div class="container">
           <div class="-mx-4 flex justify-center items-center text-white">
             <div class="w-full px-4 md:w-2/3 lg:w-1/2">
-              <p>
-                &copy; All rights reserved 2024 | Developed by
-                <a href="https://luqmanshaban,com" target="_blank"
-                  >Me</a
-                >
-              </p>
+              <p>&copy; All rights reserved 2024 | Developed by <a href="https://luqmanshaban,com" target="_blank" >Luqman Shaban</a></p>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- <div class="flex justify-center items-center">
-        <div id="loader" class="loader" style="margin: 10px 0"></div>
-      </div> -->
 
       <div>
         <span class="absolute left-0 top-0 z-[-1]">
@@ -1371,35 +1003,249 @@ body .card .send .circle i {
     <!-- ====== Back To Top Start -->
     <a
       href="javascript:void(0)"
-      class="back-to-top fixed bottom-8 right-8 left-auto z-[999] hidden h-10 w-10 items-center justify-center rounded-md bg-primary text-white shadow-md transition duration-300 ease-in-out hover:bg-dark"
+      class="back-to-top fixed bottom-8 left-auto right-8 z-[999] hidden h-10 w-10 items-center justify-center rounded-md bg-primary text-white shadow-md transition duration-300 ease-in-out hover:bg-dark"
     >
       <span
-        class="mt-[6px] h-3 w-3 rotate-45 border-t border-l border-white"
+        class="mt-[6px] h-3 w-3 rotate-45 border-l border-t border-white"
       ></span>
     </a>
     <!-- ====== Back To Top End -->
 
     <!-- ====== All Scripts -->
+
+    <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
     <script>
-      const url = 'https://mud-masters.onrender.com';
-      // const url = 'http://localhost:4000';
-      // document.getElementById("ans-container").hidden = true
-      
 
-      // end scroll
-      const loader = document.getElementById("loader");
-      loader.style.display = "none";
-  
-      function back() {
-          document.getElementById("container").hidden = false
-          // document.getElementById("ans-container").hidden = true
+    // payment options
+    //   const url = 'http://localhost:4000'
+      const url = 'https://mud-masters.onrender.com'
+
+      function checkUserData(){
+        if(!localStorage.getItem("userInfo")){
+          window.location.href = `${url}/signin.html`
+        }
       }
 
-          
+      async function price_1(){
+        if(localStorage.getItem("userInfo") == undefined){
+          window.location.href = `${url}/signin.html`
+        }else{
+          window.location.href = `${url}/form.html`
+        }
+        
+      }
 
+      async function price_2(){
+        checkUserData()
+        let userData = localStorage.getItem('userInfo')
+        userData = JSON.parse(userData);
+        const res = await axios.post(`${url}/create-checkout-session`,
+            { 
+              plan: userData.user.plan,
+              user_id: userData.user._id,
+              site: `${url}`
+            }
+            )
+            if(res.status == 200){
+              window.location.href = res.data.url
+            }
+      }
+
+      async function price_3(){
+        checkUserData()
+        let userData = localStorage.getItem('userInfo')
+        userData = JSON.parse(userData);
+        const res = await axios.post(`${url}/create-checkout-session`,
+            { 
+              plan: userData.user.plan,
+              user_id: userData.user._id,
+              site: `${url}`
+            }
+            )
+            if(res.status == 200){
+              window.location.href = res.data.url
+            }
+      }
+
+
+      // ==== for menu scroll
+      const pageLink = document.querySelectorAll(".ud-menu-scroll");
+
+      pageLink.forEach((elem) => {
+        elem.addEventListener("click", (e) => {
+          e.preventDefault();
+          document.querySelector(elem.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+            offsetTop: 1 - 60,
+          });
+        });
+      });
+
+      // section menu active
+    //   function onScroll(event) {
+    //     const sections = document.querySelectorAll(".ud-menu-scroll");
+    //     const scrollPos =
+    //       window.pageYOffset ||
+    //       document.documentElement.scrollTop ||
+    //       document.body.scrollTop;
+
+    //     for (let i = 0; i < sections.length; i++) {
+    //       const currLink = sections[i];
+    //       const val = currLink.getAttribute("href");
+    //       const refElement = document.querySelector(val);
+    //       const scrollTopMinus = scrollPos + 73;
+    //       if (
+    //         refElement.offsetTop <= scrollTopMinus &&
+    //         refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
+    //       ) {
+    //         document
+    //           .querySelector(".ud-menu-scroll")
+    //           .classList.remove("active");
+    //         currLink.classList.add("active");
+    //       } else {
+    //         currLink.classList.remove("active");
+    //       }
+    //     }
+    //   }
+
+    //   window.document.addEventListener("scroll", onScroll);
+
+      // Testimonial
+      const testimonialSwiper = new Swiper(".testimonial-carousel", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1280: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
+      });
     </script>
+   <!-- <script>
+    const fileForm = document.getElementById('fileForm');
+    const loader = document.getElementById('loader');
+    const uploadBtn = document.getElementById('uploadBtn');
+    const uploadDiv = document.getElementById('uploadForm');
+    const feedbackDiv = document.getElementById('feedbackResult');
+    let active = false;
+    let renderForm = false;
+    // let feedbackData = {}
+
+    function renderFeedback(data) {
+        // Render data in HTML
+        document.getElementById('summary').textContent = data.summary;
+    
+        const alternativePhrasesList = document.getElementById('alternativePhrases');
+        data.alternativePhrases.forEach(phrase => {
+            const listItem = document.createElement('li');
+            listItem.textContent = phrase;
+            alternativePhrasesList.appendChild(listItem);
+        });
+        
+        const waysToImproveList = document.getElementById('waysToImprove');
+        data.waysToImprove.forEach(way => {
+            const listItem = document.createElement('li');
+            listItem.textContent = way;
+            waysToImproveList.appendChild(listItem);
+        });
+        
+        const relevantArticlesList = document.getElementById('relevantArticles');
+        data.relevantArticles.forEach(article => {
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `<p>${article.title}</p> - (<a href="${article.url}" target="_blank">Read more</a>)`;
+            relevantArticlesList.appendChild(listItem);
+        });
+    }
+
+    if(!renderForm) {
+      uploadDiv.classList.remove('uploadForm')
+      feedbackDiv.classList.add('feedbackResult')
+    }else {
+      uploadDiv.classList.add('uploadForm')
+      feedbackDiv.classList.remove('feedbackResult')
+    }
+
+    function cancel() {
+      uploadDiv.classList.remove('uploadForm')
+      feedbackDiv.classList.add('feedbackResult')
+    }
+  
+    fileForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      active = !active;
+  
+      if (!active) {
+        loader.classList.add('active');
+      } else {
+        loader.classList.remove('active');
+      }
+  
+      const fileInput = document.getElementById('fileInput');
+      const file = fileInput.files[0];
+  
+      if (file) {
+        console.log(file);
+        const formData = new FormData();
+        formData.append('file', file);
+  
+        try {
+          const response = await axios.post('https://supervisr.onrender.com/file-upload', formData);
+  
+          active = !active;
+          loader.classList.add('active');
+          const data = response.data.feedback
+          console.log(data)
+          renderFeedback(data)
+          uploadDiv.classList.add('uploadForm')
+          feedbackDiv.classList.remove('feedbackResult')
+  
+        } catch (error) {
+          // Handle the error if needed
+          active = !active;
+          loader.classList.add('active');
+          console.error('Error uploading file:', error);
+        }
+      } else {
+        alert('Please select a file before submitting.');
+      }
+      
+    });
+    uploadBtn.style.opacity = 0.3;
+
+    const fileInput = document.getElementById('fileInput');
+    fileInput.addEventListener('change', function() {
+      const fileNameDisplay = document.getElementById('fileNameDisplay');
+      if (fileInput.files.length > 0) {
+        uploadBtn.removeAttribute('disabled');
+        uploadBtn.style.opacity = 1;
+        fileNameDisplay.textContent = fileInput.files[0].name;
+      } else {
+        uploadBtn.setAttribute('disabled', 'disabled');
+        uploadBtn.style.opacity = 0.5;
+        fileNameDisplay.textContent = 'No file selected';
+      }
+    });
+      
+
+  </script> -->
+  
   </body>
 </html>

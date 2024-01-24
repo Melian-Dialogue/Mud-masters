@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Mud Masters</title>
+    <title>Sign Up | TwinTech</title>
     <link
       rel="shortcut icon"
       href="assets/images/favicon.png"
@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.1/dist/css/multi-select-tag.css">
     <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.1/dist/js/multi-select-tag.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js" integrity="sha512-ml/QKfG3+Yes6TwOzQb7aCNtJF4PUyha6R3w8pSTo/VJSywl7ZreYvvtUso7fKevpsI+pYVVwnu82YO0q3V6eg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="assets/css/animate.css" />
     <link rel="stylesheet" href="assets/css/tailwind.css" />
 
@@ -128,22 +129,6 @@
                       Contact
                     </a>
                   </li>
-                  <li class="relative group">
-                    <a
-                      href="signin.html"
-                      class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark dark:text-white group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-body-color dark:lg:text-dark-6 xl:ml-10"
-                    >
-                      Login
-                    </a>
-                  </li>
-                  <li class="relative group">
-                    <a
-                      href="signup.html"
-                      class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark dark:text-white group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-body-color dark:lg:text-dark-6 xl:ml-10"
-                    >
-                      Sign Up
-                    </a>
-                  </li>
                 </ul>
               </nav>
             </div>
@@ -255,7 +240,7 @@
               <h1
                 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]"
               >
-                Meal plan generator
+              Terms and conditions
               </h1>
 
               <ul class="flex items-center justify-center gap-[10px]">
@@ -273,7 +258,7 @@
                     class="flex items-center gap-[10px] text-base font-medium text-body-color"
                   >
                     <span class="text-body-color dark:text-dark-6"> / </span>
-                    plan generator
+                    Terms and conditions
                   </a>
                 </li>
               </ul>
@@ -285,351 +270,185 @@
     <!-- ====== Banner Section End -->
 
     <!-- ====== Forms Section Start -->
-    <section class="bg-[#F4F7FF] py-14 lg:py-[90px] dark:bg-dark">
-      
-      <div class="container" >
-        <div class="flex flex-wrap -mx-4">
-          <div class="w-full px-4">
-            <div
-              class="wow fadeInUp relative mx-auto max-w-[800px] overflow-hidden rounded-xl shadow-form bg-white dark:bg-dark-2 py-14 px-8 text-center sm:px-12 md:px-[60px]"
-              data-wow-delay=".15s"
-            >
-              <div class="mb-10 text-left">
-                <!-- <a href="index.html" class="block text-center header-logo" style="padding: 0; margin: 0;">
-                <img src="./assets/images/logo/logod.png" class="" width="200" alt="">
-               </a> -->
-              </div>
+    <div class="flex bg-[#F4F7FF] py-14 lg:py-20 dark:bg-dark ">
+        <!-- Sidebar -->
+        <nav class="w-1/2 bg-gray-800 text-body-color dark:text-dark-6 min-h-screen ">
+            <!-- <ul class="py-8 px-4">
+                <li><a href="#terms-of-use" class="block py-2 text-body-color dark:text-dark-6">Terms of Use</a></li>
+                <li><a href="#privacy-notice" class="block py-2 text-body-color dark:text-dark-6">Privacy Notice</a></li>
+                <li><a href="#acceptable-use" class="block py-2 text-body-color dark:text-dark-6">Acceptable Use Notice</a></li>
+                <li><a href="#cookie-policy" class="block py-2 text-body-color dark:text-dark-6">Cookie Policy</a></li>
+            </ul> -->
+        </nav>
 
-              <div class="container text-left" id="ans-container">
-                <button class="container text-blue-600 underline" onclick="back()"><a href="#" style="color: #3498db;">back</a></button>
+        <!-- Content -->
+        <div class="flex-1 px-10 text-body-color dark:text-dark-6">
+            <!-- Section: Terms of Use -->
+            <section id="terms-of-use text-body-color dark:text-dark-6">
+                <h2 class="text-2xl font-semibold mb-4">Terms of Website Use</h2>
+                <p>
+                    These terms of use (together with the documents referred to in it) tell you the terms of use on which you may make use of the Mud Masters website <a class="hover:underline text-primary" href="www.mudmasters.co.uk">www.mudmasters.co.uk</a> (our Website), whether as a guest or a registered user. Use of our Website includes accessing, browsing, or registering to use our Website.
+                    Please read these terms of use carefully before you start to use our Website, as these will apply to your use of our Website. In particular, please read the Limitation of Liability section below. You may print a copy of these terms for future reference.
+                    By using our Website, you confirm that you accept these terms of use and that you agree to comply with them. If you do not agree to these terms of use, you must not use our Website.
+
+                </p>
+                <!-- Add more content as needed -->
+            </section>
+
+            <!-- Section: Privacy Notice -->
+            <section id="privacy-notice" class="mt-8">
+                <h2 class="text-2xl font-semibold mb-4">Other applicable terms</h2>
                 <div>
-                  <div style="white-space: pre-wrap;" class="flex flex-wrap  border p-4" id="ans">
-                  </div>
+                    These terms of use refer to the following additional terms, which also apply to your use of our Website:
+                    If you purchase or subscribe to products or services fromMud Masters, separate terms and conditions will apply to those products or services.
+                    <ul class="list-disc">
+                        <li>Our Privacy Notice, which sets out the terms on which we process any personal data we collect from you or that you provide to us via our Website. By using our Website, you consent to such processing and warrant that all data you provide is accurate.</li>
+                        <li>Our Acceptable Use Notice, which sets out the permitted uses and prohibited uses of our Website. When using our Website, you must comply with this Acceptable Use Notice.</li>
+                        <li>Our Cookie Policy, which sets out information about the cookies on our Website.</li>
+                    </ul>
                 </div>
-              </div>
+                <!-- Add more content as needed -->
+            </section>
 
-              <div id="container">
-                <form id="loginForm" method="post" class="grid grid-cols-2">
-                  <div class="mb-12 text-lg font-bold">What do you want to learn?</div>
-  
-                  <div class="mb-[22px] ">
-                    <div style="text-align: left !important; padding-left: 0.4rem;">
-                      <label for="interest">Topic of Interest</label>
-                    </div>
-                      <input placeholder="What Are Your Topics of Interest" type="text"
-                      class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                      id="interest" name="interest" required>    
-                  </div>
+            <!-- Section: Acceptable Use Notice -->
+            <section id="acceptable-use" class="mt-8">
+                <h2 class="text-2xl font-semibold mb-4">Information about us</h2>
+                <p>
+                    <a class="hover:underline text-primary" href="www.mudmasters.co.uk">www.mudmasters.co.uk</a> 
+                    is a Website operated by Mud Masters Limited ("we"). We are registered in England and Wales under company number 15398624 and have our registered office at 4 Durham Workspace, Abbey Road, Pity Me, Durham DH1 5JZ.                 
+                </p>
+                <!-- Add more content as needed -->
+            </section>
 
-                  <div class="mb-[22px] ">
-                    <textarea placeholder="Learning Goals" rows="5" type="text"
-                    class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                    id="learning-goal" name="learning-goal" required></textarea>    
-                </div>
-              
-                  <div class="mb-[22px]">
-                      <select class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                      id="learning-style" name="learning-style" required>
-                          <option value="" disabled selected>Select your Learning Style</option>
-                          <option value="Text-based lessons">Text-based lessons</option>
-                          <option value="Interactive quizzes">Interactive quizzes</option>
-                          <option value="Real-world problem-solving exercises">Real-world problem-solving exercises</option>
-                      </select>
-                  </div>
+            <!-- Section: Cookie Policy -->
+            <section id="cookie-policy" class="mt-8">
+                <h2 class="text-2xl font-semibold mb-4">Our website and terms of use</h2>
+                <p>
+                    We may change or update the content or services found on our Website at any time without notice. While we do make reasonable efforts to keep our Website up to date, we are under no obligation to update it, and make no representations that the Website is accurate, complete, up-to-date or free from errors. Consequently, we may also update these terms of use, so please check this page regularly as these terms govern your use and are binding on you. These terms were last updated on 18th December 2023.
+                </p>
+                <!-- Add more content as needed -->
+            </section>
+            <!-- Additional Sections as needed -->
+            <section id="cookie-policy" class="mt-8">
+                <h2 class="text-2xl font-semibold mb-4">Accessing our website</h2>
+                <p>
+                    Our Website is made available free of charge. We do not guarantee that our Website, or any content on it, will always be available or be uninterrupted. Access to our Website is permitted on a temporary basis. We may suspend, withdraw, discontinue or change all or any part of our Website without notice. We will not be liable to you if for any reason our Website is unavailable at any time or for any period. You are responsible for ensuring that all persons who access our Website through your internet connection are aware of these terms of use and other applicable terms and conditions and that they comply with them.
+                </p>
+                <!-- Add more content as needed -->
+            </section>
 
-                  <div class="mb-[22px]">
-                    <select class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                    id="prior-knowledge" name="prior-knowledge" required>
-                        <option value="" disabled selected>Select your Learning Prior Knowledge</option>
-                        <option value="Beginner">Beginner (new to the drilling fluid industry)</option>
-                        <option value="Intermediate">Intermediate (some experience in the field)</option>
-                        <option value="Advanced">Advanced (several years of experience or specialized knowledge)</option>
-                    </select>
-                  </div>
+            <section id="cookie-policy" class="mt-8">
+                <h2 class="text-2xl font-semibold mb-4">Your account and password</h2>
+                <p>
+                    If you choose, or you are provided with, a user identification code, password or any other piece of information as part of our security procedures, you must treat such information as confidential. You must not disclose it to any third-party. If you know or suspect that anyone other than you knows your user identification code or password, you must promptly notify us at <a href="http://support@mudmasters.co.uk">support@mudmasters.co.uk</a> .
+                    We have the right to disable any user identification code or password, whether chosen by you or allocated by us, at any time, if in our reasonable opinion, you have failed to comply with any of the provisions of these terms of use.
+                </p>
+                <!-- Add more content as needed -->
+            </section>
 
-                  <div class="mb-[22px]">
-                    <select class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                    id="difficulty-level" name="difficulty-level" required>
-                        <option value="" disabled selected>Select your Learning Difficulty Level</option>
-                        <option value="Beginner">Beginner (basic overview and fundamental concepts)</option>
-                        <option value="Intermediate">Intermediate (more detailed information, some technical jargon)</option>
-                        <option value="Advanced">Advanced (in-depth information, technical details, complex issues)</option>
-                    </select>
-                  </div>
+            <section id="cookie-policy" class="mt-8">
+                <h2 class="text-2xl font-semibold mb-4">Intellectual property rights</h2>
+                <p>
+                    We are the owner or the licensee of all intellectual property rights in our Website, and in the material published on it. Those works are protected by copyright laws and treaties around the world. All such rights are reserved.
+                    You may print off one copy and may download extracts of any page(s) from our Website for your personal use and you may draw the attention of others within your organisation to content posted on our Website.
+                    You must not modify the paper or digital copies of any materials you have printed off or downloaded in any way, and you must not use any illustrations, photographs, video or audio sequences or any graphics separately from any accompanying text. Our status (and that of any identified contributors) as the authors of content on our Website must always be acknowledged.
+                    You must not use any part of the content on our Website for commercial purposes without obtaining a licence to do so from us.
+                    If you print off, copy or download any part of our Website in breach of these terms of use, your right to use our Website will cease immediately and you must, at our option, return or destroy any copies of the materials you have made.
+                </p>
+                <!-- Add more content as needed -->
+            </section>
 
-                  <div class="mb-[22px]">
-                    <select class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                    id="learning-Mode" name="learning-Mode" required>
-                        <option value="" disabled selected>Select your Learning Mode</option>
-                        <option value="Beginner">Revision mode (review previously learned concepts)</option>
-                        <option value="Intermediate">Learning mode (learn new concepts)</option>
-                        <option value="Advanced">Challenge mode (test knowledge with quizzes or problems)</option>
-                    </select>
-                  </div>
+            <section id="cookie-policy" class="mt-8">
+                <h2 class="text-2xl font-semibold mb-4">No reliance on information</h2>
+                <p>
+                    The content on our Website is provided for general information only. It is not intended to amount to advice on which you should rely. You must obtain professional or specialist advice before taking, or refraining from, any action on the basis of the content on our Website.
+                </p>
+                <!-- Add more content as needed -->
+            </section>
 
-                  <div class="mb-[22px]">
-                    <select class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" 
-                    id="interactive-elements" name="interactive-elements" required>
-                        <option value="" disabled selected>Select your Interactive Elements</option>
-                        <option value="Beginner">Quizzes</option>
-                        <option value="Intermediate">Problem-solving exercises</option>
-                    </select>
-                  </div>
-  
-                  <br>
-                  <button 
-                  class="border w-2/5 mx-7 bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded border-spacing-1 mb-2"
-                  type="button" id="check">Generate</button>
-                  <br>
-  
-                  <span id="response"></span>
-                  <div class="flex justify-center items-center">
-                      <div id="loader" class="loader" style="margin: 10px 0"></div>
-                  </div>
-                </form>
-              </div>
-          
-              <!-- <p class="mb-4 text-base text-body-secondary">
-                By creating an account you are agree with our
-                <a
-                  href="javascript:void(0)"
-                  class="text-primary hover:underline"
-                >
-                  Privacy
-                </a>
-                and
-                <a
-                  href="javascript:void(0)"
-                  class="text-primary hover:underline"
-                >
-                  Policy
-                </a>
-              </p> -->
+            <section id="cookie-policy" class="mt-8">
+                <h2 class="text-2xl font-semibold mb-4">Limitation of our liability</h2>
+                <p>
+                    Nothing in these terms of use excludes or limits our liability for death or personal injury arising from our negligence, or our fraud or fraudulent misrepresentation, or any other liability that cannot be excluded or limited by English law.
+                    We shall not be liable for any loss or damage whatsoever and howsoever arising as a result of your use of or reliance on the information contained on our Website to the maximum extent permitted by law.
+                    If you are a business user, please note that in particular, we will not be liable for:
+                    <ul class="list-disc ml-6">
+                        <li>Loss of profits, sales, business, or revenue;</li>
+                        <li>Business interruption;</li>
+                        <li>Loss of anticipated savings;</li>
+                        <li>Loss of business opportunity, goodwill, or reputation; or</li>
+                        <li>Any indirect or consequential loss or damage.</li>
+                    </ul>
+                    If you are a consumer user, please note that we only provide our Website for domestic and private use. You agree not to use our Website for any commercial or business purposes, and we have no liability to you for any loss of profit, loss of business, business interruption, or loss of business opportunity.
+                    We will not be liable for any loss or damage caused by a virus, distributed denial-of-service attack, or other technologically harmful material that may infect your computer equipment, computer programs, data or other proprietary material due to your use of our Website or to your downloading of any content on it, or on any website linked to it.
+                    We assume no responsibility for the content of websites linked on our Website; these links are provided for your information only. Such links should not be interpreted as an endorsement by us of those linked websites. It is your responsibility to read and follow the terms and conditions of any third-party website. We will not be liable for any loss or damage that may arise from your use of them.
+                    Different limitations and exclusions of liability will apply to liability arising as a result of the supply of any product or service (e.g. finance) that we provide to you, which will be set out in separate terms (e.g. a credit agreement) that we enter with you
 
-              <div>
-                <span class="absolute top-1 right-1">
-                  <svg
-                    width="40"
-                    height="40"
-                    viewBox="0 0 40 40"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      cx="1.39737"
-                      cy="38.6026"
-                      r="1.39737"
-                      transform="rotate(-90 1.39737 38.6026)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="1.39737"
-                      cy="1.99122"
-                      r="1.39737"
-                      transform="rotate(-90 1.39737 1.99122)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="13.6943"
-                      cy="38.6026"
-                      r="1.39737"
-                      transform="rotate(-90 13.6943 38.6026)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="13.6943"
-                      cy="1.99122"
-                      r="1.39737"
-                      transform="rotate(-90 13.6943 1.99122)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="25.9911"
-                      cy="38.6026"
-                      r="1.39737"
-                      transform="rotate(-90 25.9911 38.6026)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="25.9911"
-                      cy="1.99122"
-                      r="1.39737"
-                      transform="rotate(-90 25.9911 1.99122)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="38.288"
-                      cy="38.6026"
-                      r="1.39737"
-                      transform="rotate(-90 38.288 38.6026)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="38.288"
-                      cy="1.99122"
-                      r="1.39737"
-                      transform="rotate(-90 38.288 1.99122)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="1.39737"
-                      cy="26.3057"
-                      r="1.39737"
-                      transform="rotate(-90 1.39737 26.3057)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="13.6943"
-                      cy="26.3057"
-                      r="1.39737"
-                      transform="rotate(-90 13.6943 26.3057)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="25.9911"
-                      cy="26.3057"
-                      r="1.39737"
-                      transform="rotate(-90 25.9911 26.3057)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="38.288"
-                      cy="26.3057"
-                      r="1.39737"
-                      transform="rotate(-90 38.288 26.3057)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="1.39737"
-                      cy="14.0086"
-                      r="1.39737"
-                      transform="rotate(-90 1.39737 14.0086)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="13.6943"
-                      cy="14.0086"
-                      r="1.39737"
-                      transform="rotate(-90 13.6943 14.0086)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="25.9911"
-                      cy="14.0086"
-                      r="1.39737"
-                      transform="rotate(-90 25.9911 14.0086)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="38.288"
-                      cy="14.0086"
-                      r="1.39737"
-                      transform="rotate(-90 38.288 14.0086)"
-                      fill="#3056D3"
-                    />
-                  </svg>
-                </span>
-                <span class="absolute left-1 bottom-1">
-                  <svg
-                    width="29"
-                    height="40"
-                    viewBox="0 0 29 40"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      cx="2.288"
-                      cy="25.9912"
-                      r="1.39737"
-                      transform="rotate(-90 2.288 25.9912)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="14.5849"
-                      cy="25.9911"
-                      r="1.39737"
-                      transform="rotate(-90 14.5849 25.9911)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="26.7216"
-                      cy="25.9911"
-                      r="1.39737"
-                      transform="rotate(-90 26.7216 25.9911)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="2.288"
-                      cy="13.6944"
-                      r="1.39737"
-                      transform="rotate(-90 2.288 13.6944)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="14.5849"
-                      cy="13.6943"
-                      r="1.39737"
-                      transform="rotate(-90 14.5849 13.6943)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="26.7216"
-                      cy="13.6943"
-                      r="1.39737"
-                      transform="rotate(-90 26.7216 13.6943)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="2.288"
-                      cy="38.0087"
-                      r="1.39737"
-                      transform="rotate(-90 2.288 38.0087)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="2.288"
-                      cy="1.39739"
-                      r="1.39737"
-                      transform="rotate(-90 2.288 1.39739)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="14.5849"
-                      cy="38.0089"
-                      r="1.39737"
-                      transform="rotate(-90 14.5849 38.0089)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="26.7216"
-                      cy="38.0089"
-                      r="1.39737"
-                      transform="rotate(-90 26.7216 38.0089)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="14.5849"
-                      cy="1.39761"
-                      r="1.39737"
-                      transform="rotate(-90 14.5849 1.39761)"
-                      fill="#3056D3"
-                    />
-                    <circle
-                      cx="26.7216"
-                      cy="1.39761"
-                      r="1.39737"
-                      transform="rotate(-90 26.7216 1.39761)"
-                      fill="#3056D3"
-                    />
-                  </svg>
-                </span>
-              </div>
-            </div>
-          </div>
+                </p>
+                <!-- Add more content as needed -->
+            </section>
+
+            <section id="cookie-policy" class="mt-8">
+                <h2 class="text-2xl font-semibold mb-4">Uploading content to our website</h2>
+                <p>
+                    Whenever you make use of a feature that allows you to upload content to our Website, or to make contact with other users of our Website, you must comply with the content standards set out in our Acceptable Use Notice.
+                    You warrant that any such contribution does comply with those standards, and you will be liable to us and indemnify us for any breach of that warranty. If you are a consumer user, this means you will be responsible for any loss or damage we suffer as a result of your breach of warranty.
+                    Any content you upload to our Website will be considered non-confidential and non-proprietary. You retain all of your ownership rights in your content, but you are required to grant us and other users of our Website a limited licence to use, store and copy that content and to distribute and make it available to third parties. The rights you licence to us are described in the next section (Rights you licence).
+                    We also have the right to disclose your identity to any third-party who is claiming that any content posted or uploaded by you to our Website constitutes a violation of their intellectual property rights, or of their right to privacy.
+                    We will not be responsible, or liable to any third-party, for the content or accuracy of any content posted by you or any other user of our Website.
+                    We have the right to remove any posting you make on our Website if, in our opinion, your post does not comply with the content standards set out in our Acceptable Use Notice.
+                    The views expressed by other users on our Website do not represent our views or values.
+                </p>
+                <!-- Add more content as needed -->
+            </section>
+
+            <section id="cookie-policy" class="mt-8">
+                <h2 class="text-2xl font-semibold mb-4">Rights you licence</h2>
+                <p>
+                    When you upload or post content to our Website, you grant the following licences:
+                    <ul class="list-disc ml-6">
+                        <li>
+                            To us, a perpetual, worldwide, non-exclusive, royalty-free, transferable licence to use, reproduce, distribute, prepare derivative works of, display, and perform that user-generated content in connection with the service provided by the website and across different media (including without limitation to promote our Website or service);
+                        </li>
+                        <li>
+                            To other users of our Website or to third parties, a licence to use the content for their purposes or in accordance with the functionality of our Website.
+                        </li>
+                    </ul>
+                </p>
+                <!-- Add more content as needed -->
+            </section>
+
+            <section id="cookie-policy" class="mt-8">
+                <h2 class="text-2xl font-semibold mb-4">Viruses</h2>
+                <p>
+                    We do not guarantee that our Website will be secure or free from bugs or viruses. You are responsible for configuring your information technology, computer programmes and platform in order to access our Website. You should use your own virus protection software.
+                    You must not misuse our Website by knowingly introducing viruses, trojans, worms, logic bombs or other material which is malicious or technologically harmful. You must not attempt to gain unauthorised access to our Website, the server on which our Website is stored or any server, computer or database connected to our Website. You must not attack our Website via a denial-of-service attack or a distributed denial-of-service attack. By breaching this provision, you would commit a criminal offence under the Computer Misuse Act 1990. We will report any such breach to the relevant law enforcement authorities and we will cooperate with those authorities by disclosing your identity to them. In the event of such a breach, your right to use our Website will cease immediately.
+                </p>
+                <!-- Add more content as needed -->
+            </section>
+
+            <section id="cookie-policy" class="mt-8">
+                <h2 class="text-2xl font-semibold mb-4">Linking to our website</h2>
+                <p>
+                    If you wish to link to our home page, you must gain prior written consent from Us before creating the link, and provided that you do so in the manner outlined below. You may only link to our home page, provided you do so in a way that is fair and legal and does not damage our reputation or take advantage of it. You must not establish a link in such a way as to suggest any form of association, approval or endorsement on our part where none exists.
+                    You must not establish a link to our Website on any website that is not owned by you. Our Website must not be framed on any other website, nor may you create a link to any part of our Website other than the homepage. We reserve the right to withdraw linking permission without notice.
+                    The website to which you are linking must comply in all respects with the content standards set out in our Acceptable Use Notice. If you wish to make any use of the content on our Website other than that set out above,
+                    <a href="http://support@africantrade.events">support@africantrade.events.</a>
+                </p>
+                <!-- Add more content as needed -->
+            </section>
+
+            <section id="cookie-policy" class="mt-8">
+                <h2 class="text-2xl font-semibold mb-4">Applicable law</h2>
+                <p>
+                    If you are a consumer, please note that these terms of use, its subject matter and their formation are governed by English law. You and we both agree that the courts of England and Wales will have non-exclusive jurisdiction. However, if you are a resident of Northern Ireland, you may also bring proceedings in Northern Ireland. If you are a resident of Scotland, you may also bring proceedings in Scotland.
+                    Thank you for visiting our Website.
+                </p>
+                <!-- Add more content as needed -->
+            </section>
+
         </div>
-      </div>
-     
-    </section>
+    </div>
     <!-- ====== Forms Section End -->
 
     
@@ -791,7 +610,7 @@
                 </li>
                 <li>
                   <a
-                    href="javascript:void(0)"
+                    href="privacy.html"
                     class="mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
                     Privacy policy
@@ -881,7 +700,7 @@
               <p>
                 &copy; All rights reserved 2024 | Developed by
                 <a href="https://luqmanshaban,com" target="_blank"
-                  >Me</a
+                  >Ruel Ngatia</a
                 >
               </p>
             </div>
@@ -1172,165 +991,5 @@
     <script src="assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <script>
-      const url = 'https://mud-masters.onrender.com';
-      // const url = 'http://localhost:4000';
-      document.getElementById("ans-container").hidden = true
-      
-    //   const setupRangeInput = (inputId, outputId, ty) => {
-    //   const
-    //     range = document.getElementById(inputId),
-    //     rangeV = document.getElementById(outputId),
-    //     setValue = () => {
-    //       const
-    //         newValue = Number((range.value - range.min) * 100 / (range.max - range.min)),
-    //         newPosition = 10 - (newValue * 0.2);
-    //       rangeV.innerHTML = `<span>${range.value} ${ty}</span>`;
-    //       rangeV.style.left = `calc(${newValue}% + (${newPosition}px))`;
-    //     };
-
-    //   document.addEventListener("DOMContentLoaded", setValue);
-    //   range.addEventListener('input', setValue);
-    // };
-
-    // setupRangeInput('daily_calorie_consumption', 'daily_calorie_consumptionV', 'cal');
-    // setupRangeInput('daily_calorie_limit', 'daily_calorie_limitV', 'cal');
-    // setupRangeInput('meal_salt_limit', 'meal_salt_limitV', 'mg');
-    // setupRangeInput('meal_sugar_limit', 'meal_sugar_limitV', 'mg');
-    // setupRangeInput('activity_levels', 'activity_levelsV', 'mild_level');
-
-
-      // end scroll
-      const loader = document.getElementById("loader");
-      loader.style.display = "none";
-      const response = document.getElementById("response");
-      let foods = []
-
-      // new MultiSelectTag('food_preferences', {
-      //         rounded: true,    // default true
-      //         shadow: true,      // default false
-      //         placeholder: 'Search',  // default Search...
-      //         tagColor: {
-      //             textColor: '#327b2c',
-      //             borderColor: '#92e681',
-      //             bgColor: '#eaffe6',
-      //         },
-      //         onChange: function(values) {
-      //            foods = values;
-      //         }
-      //     })
-
-
-    function back() {
-        document.getElementById("container").hidden = false
-        document.getElementById("ans-container").hidden = true
-    }
-
-      document
-        .getElementById("check")
-        .addEventListener("click", async function (event) {
-            
-          event.preventDefault(); // Prevents the default form submission
-          loader.style.display = "block";
-
-          // Get values from the form
-          // const username = document.getElementById("username");
-          // const email = document.getElementById("email");
-
-          const topicOfInterest = document.getElementById("interest"); 
-          const learningGoals = document.getElementById("learning-goal");
-          const learningStyle = document.getElementById("learning-style");
-          const priorKnowledge = document.getElementById("prior-knowledge");
-          const difficultyLevel = document.getElementById("difficulty-level");
-          const learningMode = document.getElementById("learning-Mode");
-          const interactiveElements = document.getElementById("interactive-elements");
-         
-      
-          // Construct the data to be sent
-          const formData = {
-              topic_of_interest: topicOfInterest.value,
-              learning_goals: learningGoals.value,
-              learning_style: learningStyle.value,
-              prior_knowledge: priorKnowledge.value,
-              difficulty_level: difficultyLevel.value,
-              learning_mode: learningMode.value,
-              interaction: interactiveElements.value
-          }
-
-
-          
-          var i = 0;
-          var speed = 20;
-          var responseFromApi = '';
-
-          function typeWriter() {
-            if (i < responseFromApi.length) {
-              document.getElementById("ans").innerHTML += responseFromApi.charAt(i);
-              i++;
-              setTimeout(typeWriter, speed);
-            }
-          }
-
-          // Send data to localhost:3000 (Replace with your actual endpoint)
-          try {
-
-            let userData = localStorage.getItem('userInfo')
-            userData = JSON.parse(userData);
-            const userDetails = await axios.get(
-              `${url}/user`,
-              {
-                headers: {
-                  'Authorization': 'Bearer ' + userData.token
-                } 
-              }
-            );
-
-            let p = userDetails.data
-            if(/*p.user.requests > 0*/true){
-                const res = await axios.post(
-                `https://mudmasters-trainer.onrender.com/mudmasters/trainer`,
-                formData,
-              );
-
-              document.getElementById("ans-container").hidden = false;
-              response.style.color = "green";
-              response.style.margin = "10px 0";
-              // response.textContent = "Successfully signed up! Please check your inbox for further Instructions";
-              loader.style.display = "none";
-              // Handle the response from the server if needed
-              // window.location.href = "https://headhuntrs.co.uk/signin.html";
-
-              //reduce request count
-              let userData = localStorage.getItem('userInfo')
-              userData = JSON.parse(userData);
-              const requestCount = await axios.get(
-                `${url}/update-requests`,
-                {
-                  headers: {
-                    'Authorization': 'Bearer ' + userData.token
-                  } 
-                }
-              );
-
-              document.getElementById("container").hidden = true
-              // document.getElementById("ans").innerHTML = res.data.meal_plan.trim()
-              responseFromApi = res.data;
-              typeWriter()
-            }else{
-              loader.style.display = "none";
-              response.style.color = "red";
-              response.textContent = "You have no active of sub-scriptions";
-            }
-
-          } catch (error) {
-            loader.style.display = "none";
-            console.log(error);
-
-              response.style.color = "red";
-              response.textContent = "Some error happened please try again.";
-
-          }
-        });
-    </script>
   </body>
 </html>

@@ -485,7 +485,7 @@ body .card .send .circle i {
                           let p = userDetails.data
                           if(/*p.user.requests > 0*/true){
                               const res = await axios.post(
-                              `https://mudmasters-chatbot.onrender.com/mudmasters/chatbot`,
+                              `http://92.205.21.181:3001/chatbot`,
                               formData
                             );
 
@@ -1389,8 +1389,8 @@ body .card .send .circle i {
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script>
-      const url = 'https://mud-masters.onrender.com';
-      // const url = 'http://localhost:4000';
+      // const url = 'https://mud-masters.onrender.com';
+      const url = 'http://92.205.21.181:4002';
       // document.getElementById("ans-container").hidden = true
       
 

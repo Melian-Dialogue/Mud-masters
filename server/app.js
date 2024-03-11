@@ -9,7 +9,7 @@ const app = express()
 
 app.use(express.json())
 app.use(cors({
-    origin: ['*', 'http://92.205.21.181:4002', 'http://localhost:4002']
+    origin: ['*', 'https://mud-masters-mzuf.onrender.com', 'http://localhost:4002']
 }))
 app.use(express.static('../front'));
 app.use(userRouter)

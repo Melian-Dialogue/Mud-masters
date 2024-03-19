@@ -3,8 +3,8 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
-// const connectionSring = 'mongodb+srv://sugutlynn:sugutlynn@cluster0.yjsqky7.mongodb.net/site_db';
-const connectionSring = 'mongodb+srv://ruelngatia:vSopfvUOguEwHpOK@cluster0.cld0fy3.mongodb.net/site_db';
+
+const connectionSring = process.env.DB_STRING;
 
 export const connectToDB = async () => {
     try {

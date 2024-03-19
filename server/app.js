@@ -8,9 +8,7 @@ import paymentRouter from './routes/PaymentRoute.js'
 const app = express()
 
 app.use(express.json())
-app.use(cors({
-    origin: ['*', 'https://mud-masters-mzuf.onrender.com', 'http://localhost:4002']
-}))
+app.use(cors())
 app.use(express.static('../front'));
 app.use(userRouter)
 app.use(paymentRouter)

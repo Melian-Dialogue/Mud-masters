@@ -45,7 +45,10 @@ const signup = async (req, res, next) => {
 
 const sendVerificationEmail = (to, link) => {
   const transporter = nodemailer.createTransport({
-    service: "gmail",
+    // service: "gmail",
+    host: 'smtpout.secureserver.net', // GoDaddy's SMTP server
+    port: 465,
+    secure: true,
     auth: {
       user: process.env.EMAIL, // your email address
       pass: process.env.PASS, // your email password
@@ -501,7 +504,10 @@ const generateVerificationCode = () => {
 
 const sendVerificationCode = (to, code) => {
   const transporter = nodemailer.createTransport({
-    service: "gmail",
+    // service: "gmail",
+    host: 'smtpout.secureserver.net', // GoDaddy's SMTP server
+    port: 465,
+    secure: true,
     auth: {
       user: process.env.EMAIL, // your email address
       pass: process.env.PASS, // your email password
